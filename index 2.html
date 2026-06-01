@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revelation Knowledge | Knowing God in Christ</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f1f3d;--navy-mid:#1a3260;--blue:#2563a8;--sky:#dbeafe;--sky-mid:#bfdbfe;--white:#ffffff;--cream:#f8faff;--text-primary:#0f1f3d;--text-secondary:#4a5a7a;--text-muted:#8a9bbf;--border:#e2eaf7;--gold:#c9a84c;--gold-light:#f5e6b8;--success:#16a34a;--success-light:#dcfce7;--danger:#dc2626;--danger-light:#fee2e2;--warning:#d97706;--warning-light:#fef3c7;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-primary);min-height:100vh;}
+#login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 50%,#1e4080 100%);position:relative;overflow:hidden;}
+.login-card{background:var(--white);border-radius:24px;padding:48px 56px;width:420px;max-width:95vw;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,0.3);}
+.login-cross{font-size:36px;color:var(--gold);margin-bottom:8px;display:block;}
+.login-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:6px;}
+.login-subtitle{font-size:13px;color:var(--text-muted);margin-bottom:36px;}
+.login-label{font-size:12px;font-weight:500;color:var(--text-secondary);text-align:left;display:block;margin-bottom:8px;letter-spacing:0.8px;text-transform:uppercase;}
+.user-btn{display:flex;align-items:center;gap:16px;width:100%;padding:18px 24px;border:1.5px solid var(--border);border-radius:14px;background:var(--cream);cursor:pointer;transition:all 0.2s;margin-bottom:12px;text-align:left;}
+.user-btn:hover{border-color:var(--blue);background:var(--sky);transform:translateY(-1px);}
+.user-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;flex-shrink:0;}
+.avatar-wife{background:#dbeafe;color:#1d4ed8;}.avatar-husband{background:#fef3c7;color:#92400e;}
+.user-info-name{font-weight:500;font-size:16px;color:var(--text-primary);}.user-info-sub{font-size:12px;color:var(--text-muted);margin-top:2px;}
+#app{display:none;}
+.topbar{background:var(--navy);color:white;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.topbar-brand{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;}
+.topbar-brand span{color:var(--gold);}
+.topbar-right{display:flex;align-items:center;gap:14px;}
+.topbar-user{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.8);}
+.topbar-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;font-family:'Cormorant Garamond',serif;}
+.streak-badge{background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.4);color:var(--gold);padding:4px 12px;border-radius:999px;font-size:12px;font-weight:500;}
+.logout-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:12px;font-family:'DM Sans',sans-serif;}
+.logout-btn:hover{background:rgba(255,255,255,0.2);}
+.nav-tabs{background:var(--white);border-bottom:1px solid var(--border);display:flex;padding:0 32px;gap:4px;overflow-x:auto;}
+.nav-tab{padding:16px 20px;font-size:13px;font-weight:500;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all 0.2s;background:none;border-top:none;border-left:none;border-right:none;font-family:'DM Sans',sans-serif;}
+.nav-tab:hover{color:var(--blue);}.nav-tab.active{color:var(--blue);border-bottom-color:var(--blue);}
+.main-content{max-width:960px;margin:0 auto;padding:32px 24px;}
+.dashboard-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:20px;padding:40px 48px;color:white;margin-bottom:28px;position:relative;overflow:hidden;}
+.dashboard-hero::after{content:'✦';position:absolute;right:48px;top:50%;transform:translateY(-50%);font-size:80px;color:rgba(255,255,255,0.06);}
+.dashboard-greeting{font-size:13px;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+.dashboard-name{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;margin-bottom:8px;}
+.dashboard-verse{font-style:italic;font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(255,255,255,0.65);}
+.dashboard-verse-ref{font-size:12px;color:rgba(255,255,255,0.45);margin-top:4px;}
+.votd-card{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:14px;padding:20px 24px;margin-bottom:20px;}
+.votd-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:500;margin-bottom:8px;}
+.votd-text{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--navy);line-height:1.5;margin-bottom:4px;}
+.votd-ref{font-size:12px;color:var(--text-muted);}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:28px;}
+.stat-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px 24px;}
+.stat-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;}
+.stat-value{font-size:28px;font-weight:500;color:var(--navy);font-family:'Cormorant Garamond',serif;}
+.stat-sub{font-size:12px;color:var(--text-muted);margin-top:2px;}
+.progress-panel{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:24px;}
+.progress-panel-title{font-size:13px;font-weight:500;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:16px;}
+.couple-progress{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.person-progress{display:flex;flex-direction:column;gap:8px;}
+.person-label{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;}
+.progress-bar-wrap{height:8px;background:var(--sky);border-radius:999px;overflow:hidden;}
+.progress-bar-fill{height:100%;border-radius:999px;transition:width 0.5s ease;}
+.fill-wife{background:var(--blue);}.fill-husband{background:var(--gold);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--navy);margin-bottom:16px;}
+.lessons-grid{display:flex;flex-direction:column;gap:12px;}
+.lesson-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow 0.2s;}
+.lesson-card:hover{box-shadow:0 4px 20px rgba(37,99,168,0.1);}
+.lesson-header{display:flex;align-items:center;padding:20px 24px;cursor:pointer;gap:16px;}
+.lesson-num{width:40px;height:40px;border-radius:12px;background:var(--sky);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:500;font-size:14px;flex-shrink:0;}
+.lesson-num.completed{background:var(--success-light);color:var(--success);}
+.lesson-meta{flex:1;}
+.lesson-title{font-weight:500;font-size:15px;color:var(--text-primary);margin-bottom:3px;}
+.lesson-sub{font-size:12px;color:var(--text-muted);}
+.lesson-badges{display:flex;gap:6px;align-items:center;flex-shrink:0;}
+.badge{font-size:11px;padding:3px 10px;border-radius:999px;font-weight:500;}
+.badge-done{background:var(--success-light);color:var(--success);}.badge-pending{background:var(--sky);color:var(--blue);}
+.lesson-body{display:none;border-top:1px solid var(--border);padding:24px;}
+.lesson-body.open{display:block;}
+/* ALWAYS-VISIBLE COMPLETE BUTTON */
+.complete-btn-bar{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;}
+.complete-btn-bar-text{font-size:13px;color:var(--text-muted);}
+.complete-btn{background:var(--navy);color:white;border:none;padding:12px 28px;border-radius:10px;font-size:14px;font-weight:500;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
+.complete-btn:hover{background:var(--blue);transform:translateY(-1px);}
+.complete-btn:disabled{background:var(--success);cursor:default;transform:none;}
+/* TIMESTAMP TRACKER */
+.timestamp-bar{background:linear-gradient(135deg,#0f1f3d,#1a3260);border-radius:14px;padding:20px 24px;margin-bottom:20px;}
+.timestamp-title{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.5);margin-bottom:12px;}
+.timestamp-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.ts-in{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;padding:8px 14px;border-radius:10px;font-size:13px;font-family:'DM Sans',sans-serif;}
+.ts-in::placeholder{color:rgba(255,255,255,0.35);}
+.ts-in:focus{outline:none;border-color:var(--gold);}
+.ts-time{width:110px;}.ts-note{flex:1;min-width:160px;}
+.ts-save-btn{background:var(--gold);color:var(--navy);border:none;padding:8px 18px;border-radius:10px;font-size:12px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;}
+.timestamp-saved{margin-top:10px;display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;}
+.ts-chip{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);padding:5px 12px;border-radius:999px;font-size:12px;display:flex;align-items:center;gap:6px;}
+.ts-chip .del{color:rgba(255,255,255,0.4);cursor:pointer;font-size:14px;line-height:1;}
+.ts-chip .del:hover{color:#f87171;}
+.watch-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);color:white;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s;margin-top:12px;}
+.watch-btn:hover{background:rgba(255,255,255,0.25);}
+/* MEMORY VERSE */
+.scripture-memory{background:linear-gradient(135deg,var(--sky) 0%,#e0f2fe 100%);border:1px solid var(--sky-mid);border-radius:12px;padding:20px 24px;margin-bottom:20px;}
+.scripture-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--blue);font-weight:500;margin-bottom:10px;}
+.scripture-text{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--navy);line-height:1.5;margin-bottom:6px;}
+.scripture-ref{font-size:12px;color:var(--blue);font-weight:500;margin-bottom:12px;}
+.hide-btn{background:var(--blue);color:white;border:none;padding:6px 14px;border-radius:8px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.hide-btn:hover{background:var(--navy);}
+.study-steps{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;}
+.step-pill{padding:8px 16px;border-radius:999px;font-size:12px;font-weight:500;border:1.5px solid var(--border);cursor:pointer;transition:all 0.2s;background:var(--white);color:var(--text-secondary);font-family:'DM Sans',sans-serif;}
+.step-pill:hover{border-color:var(--blue);color:var(--blue);}
+.step-pill.active{background:var(--navy);color:white;border-color:var(--navy);}
+.step-content{display:none;}.step-content.active{display:block;}
+.questions-list{display:flex;flex-direction:column;gap:20px;}
+.question-item{border-left:3px solid var(--blue);padding-left:16px;}
+.question-text{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--navy);margin-bottom:10px;line-height:1.4;}
+.question-verse{font-size:12px;color:var(--gold);font-weight:500;margin-bottom:10px;}
+.answer-area{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--text-primary);resize:vertical;min-height:80px;background:var(--cream);transition:border-color 0.2s;line-height:1.6;}
+.answer-area:focus{outline:none;border-color:var(--blue);background:var(--white);}
+/* KEY INSIGHT */
+.insight-box{background:var(--gold-light);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:16px 20px;margin-top:20px;}
+.insight-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--warning);font-weight:500;margin-bottom:8px;}
+.insight-input{width:100%;background:transparent;border:none;font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--navy);resize:vertical;min-height:60px;padding:0;line-height:1.5;}
+.insight-input:focus{outline:none;}
+.insight-input::placeholder{color:rgba(15,31,61,0.35);}
+/* FLASHCARDS */
+.flashcard-wrap{perspective:1000px;height:220px;margin-bottom:20px;cursor:pointer;}
+.flashcard-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 0.5s;}
+.flashcard-inner.flipped{transform:rotateY(180deg);}
+.flashcard-front,.flashcard-back{position:absolute;inset:0;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;backface-visibility:hidden;}
+.flashcard-front{background:var(--navy);color:white;}
+.flashcard-back{background:var(--sky);color:var(--navy);transform:rotateY(180deg);}
+.flashcard-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;opacity:0.6;margin-bottom:12px;}
+.flashcard-text{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;line-height:1.4;}
+.flashcard-hint{font-size:11px;opacity:0.5;margin-top:12px;}
+.flashcard-nav{display:flex;align-items:center;justify-content:center;gap:16px;}
+.fc-btn{padding:8px 20px;border:1.5px solid var(--border);border-radius:10px;background:var(--white);color:var(--text-primary);font-size:13px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
+.fc-btn:hover{border-color:var(--blue);color:var(--blue);}
+.fc-counter{font-size:13px;color:var(--text-muted);min-width:60px;text-align:center;}
+.fc-known-row{display:flex;gap:10px;justify-content:center;margin-top:14px;}
+.fc-known-btn{padding:6px 18px;border-radius:999px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;border:1.5px solid;transition:all 0.2s;font-weight:500;}
+.fc-knew{border-color:var(--success);color:var(--success);background:transparent;}
+.fc-knew:hover{background:var(--success-light);}
+.fc-didnt{border-color:var(--danger);color:var(--danger);background:transparent;}
+.fc-didnt:hover{background:var(--danger-light);}
+.fc-score{font-size:12px;color:var(--text-muted);text-align:center;margin-top:8px;}
+/* PRAYER */
+.prayer-box{background:linear-gradient(135deg,#f0f7ff 0%,#e8f4fd 100%);border:1px solid var(--sky-mid);border-radius:16px;padding:28px 32px;margin-bottom:20px;}
+.prayer-icon{font-size:24px;margin-bottom:12px;display:block;}
+.prayer-heading{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--navy);margin-bottom:6px;font-weight:600;}
+.prayer-prompt{font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;}
+.prayer-starter{font-style:italic;color:var(--blue);font-family:'Cormorant Garamond',serif;font-size:16px;border-left:2px solid var(--gold);padding-left:14px;margin-bottom:16px;line-height:1.6;}
+/* JOURNAL */
+.journal-section{margin-top:20px;}
+.journal-label{font-size:12px;font-weight:500;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:8px;}
+.journal-entry{width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:12px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--text-primary);resize:vertical;min-height:120px;background:var(--cream);line-height:1.7;}
+.journal-entry:focus{outline:none;border-color:var(--blue);background:var(--white);}
+.journal-saved{font-size:11px;color:var(--success);margin-top:4px;display:none;}
+.print-btn{background:transparent;border:1.5px solid var(--border);color:var(--text-secondary);padding:8px 16px;border-radius:10px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+.print-btn:hover{border-color:var(--navy);color:var(--navy);}
+/* EXAM */
+.exam-hero{background:linear-gradient(135deg,var(--navy) 0%,#1e3a6e 100%);border-radius:20px;padding:40px;color:white;text-align:center;margin-bottom:28px;}
+.exam-hero-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;margin-bottom:8px;}
+.exam-hero-sub{color:rgba(255,255,255,0.65);font-size:14px;margin-bottom:24px;}
+.start-exam-btn{background:var(--gold);color:var(--navy);border:none;padding:14px 36px;border-radius:12px;font-size:15px;font-weight:500;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
+.start-exam-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.exam-progress-bar{height:6px;background:rgba(255,255,255,0.15);border-radius:999px;margin-bottom:28px;overflow:hidden;}
+.exam-progress-fill{height:100%;background:var(--gold);border-radius:999px;transition:width 0.3s;}
+.exam-question{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:16px;}
+.exam-q-num{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:8px;}
+.exam-q-text{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--navy);margin-bottom:20px;line-height:1.4;}
+.exam-options{display:flex;flex-direction:column;gap:10px;}
+.exam-option{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;border:1.5px solid var(--border);border-radius:12px;cursor:pointer;transition:all 0.2s;background:var(--cream);font-size:14px;color:var(--text-primary);}
+.exam-option:hover{border-color:var(--blue);background:var(--sky);}
+.exam-option.selected{border-color:var(--blue);background:var(--sky);}
+.exam-option.correct{border-color:var(--success);background:var(--success-light);color:var(--success);}
+.exam-option.wrong{border-color:var(--danger);background:var(--danger-light);color:var(--danger);}
+.option-letter{width:24px;height:24px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;}
+.exam-submit-btn{background:var(--navy);color:white;border:none;padding:14px 36px;border-radius:12px;font-size:15px;font-weight:500;cursor:pointer;transition:all 0.2s;display:block;margin:24px auto 0;font-family:'DM Sans',sans-serif;}
+.exam-submit-btn:hover{background:var(--blue);}
+.score-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:48px;text-align:center;display:none;}
+.score-big{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:600;color:var(--navy);line-height:1;margin-bottom:8px;}
+.score-label{font-size:14px;color:var(--text-muted);margin-bottom:24px;}
+/* ACCOUNTABILITY */
+.accountability-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;}
+.person-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;}
+.person-card-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.person-card-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;}
+.person-card-name{font-weight:500;font-size:16px;}.person-card-sub{font-size:12px;color:var(--text-muted);margin-top:2px;}
+.lesson-dots{display:flex;flex-wrap:wrap;gap:6px;}
+.lesson-dot{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;}
+.dot-done{background:var(--success-light);color:var(--success);}.dot-pending{background:var(--sky);color:var(--blue);}
+.exam-compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px;}
+.exam-compare-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;}
+.exam-score-big{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;margin:8px 0;}
+.note-form{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;}
+.note-input{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;resize:vertical;min-height:100px;margin-bottom:12px;background:var(--cream);}
+.note-input:focus{outline:none;border-color:var(--blue);}
+.send-note-btn{background:var(--blue);color:white;border:none;padding:10px 24px;border-radius:10px;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+.send-note-btn:hover{background:var(--navy);}
+.notes-list{display:flex;flex-direction:column;gap:12px;margin-top:16px;}
+.note-item{border-left:3px solid var(--gold);padding:12px 16px;background:var(--gold-light);border-radius:0 10px 10px 0;}
+.note-from{font-size:11px;font-weight:500;color:var(--text-muted);margin-bottom:4px;}
+.note-text{font-size:14px;color:var(--text-primary);}
+@keyframes confetti-fall{0%{transform:translateY(-20px) rotate(0deg);opacity:1;}100%{transform:translateY(100vh) rotate(720deg);opacity:0;}}
+.confetti-piece{position:fixed;animation:confetti-fall linear forwards;pointer-events:none;z-index:9999;}
+@media(max-width:640px){.main-content{padding:16px;}.dashboard-hero{padding:28px 24px;}.login-card{padding:32px 24px;}.couple-progress,.accountability-grid,.exam-compare{grid-template-columns:1fr;}.topbar{padding:0 16px;}.nav-tabs{padding:0 16px;}.streak-badge{display:none;}}
+@media print{.topbar,.nav-tabs,.study-steps,.complete-btn-bar,.timestamp-bar,.fc-known-row,.hide-btn,.send-note-btn,.print-btn{display:none!important;}.lesson-body{display:block!important;}.step-content{display:block!important;}body{background:white;}}
+</style>
+</head>
+<body>
+<div id="login-screen">
+  <div class="login-card">
+    <span class="login-cross">✦</span>
+    <h1 class="login-title">Revelation Knowledge<br>Knowing God in Christ</h1>
+    <p class="login-subtitle">Dr. Abel Damina · 12-Part Series</p>
+    <span class="login-label">Who is studying today?</span>
+    <button class="user-btn" onclick="login('Wife')">
+      <div class="user-avatar avatar-wife">W</div>
+      <div><div class="user-info-name">Wife</div><div class="user-info-sub">Continue your study journey</div></div>
+    </button>
+    <button class="user-btn" onclick="login('Husband')">
+      <div class="user-avatar avatar-husband">H</div>
+      <div><div class="user-info-name">Husband</div><div class="user-info-sub">Continue your study journey</div></div>
+    </button>
+  </div>
+</div>
+<div id="app">
+  <div class="topbar">
+    <div class="topbar-brand">Revelation <span>Knowledge</span></div>
+    <div class="topbar-right">
+      <div class="streak-badge" id="streak-badge">🔥 0 day streak</div>
+      <div class="topbar-user">
+        <div class="topbar-avatar" id="topbar-avatar"></div>
+        <span id="topbar-name"></span>
+      </div>
+      <button class="logout-btn" onclick="logout()">Sign out</button>
+    </div>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showTab('dashboard',this)">Dashboard</button>
+    <button class="nav-tab" onclick="showTab('lessons',this)">Lessons</button>
+    <button class="nav-tab" onclick="showTab('journal',this)">My Journal</button>
+    <button class="nav-tab" onclick="showTab('exam',this)">Final Exam</button>
+    <button class="nav-tab" onclick="showTab('accountability',this)">Our Progress</button>
+  </div>
+  <div class="main-content">
+    <div id="tab-dashboard">
+      <div class="dashboard-hero">
+        <div class="dashboard-greeting">Welcome back</div>
+        <div class="dashboard-name" id="dash-name">Beloved</div>
+        <div class="dashboard-verse" id="votd-hero"></div>
+        <div class="dashboard-verse-ref" id="votd-hero-ref"></div>
+      </div>
+      <div class="votd-card">
+        <div class="votd-label">✦ Today's Memory Verse</div>
+        <div class="votd-text" id="votd-text"></div>
+        <div class="votd-ref" id="votd-ref"></div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card"><div class="stat-label">Lessons Complete</div><div class="stat-value" id="stat-lessons">0/12</div><div class="stat-sub">Keep going!</div></div>
+        <div class="stat-card"><div class="stat-label">Study Streak</div><div class="stat-value" id="stat-streak">0</div><div class="stat-sub">days in a row 🔥</div></div>
+        <div class="stat-card"><div class="stat-label">Flashcards Done</div><div class="stat-value" id="stat-flashcards">0</div><div class="stat-sub">Cards reviewed</div></div>
+        <div class="stat-card"><div class="stat-label">Exam Score</div><div class="stat-value" id="stat-exam">—</div><div class="stat-sub" id="stat-exam-sub">Not attempted</div></div>
+        <div class="stat-card"><div class="stat-label">Spouse Progress</div><div class="stat-value" id="stat-spouse">0/12</div><div class="stat-sub" id="stat-spouse-name">lessons done</div></div>
+      </div>
+      <div class="progress-panel">
+        <div class="progress-panel-title">Couple Progress Together</div>
+        <div class="couple-progress">
+          <div class="person-progress">
+            <div class="person-label"><div class="user-avatar avatar-wife" style="width:28px;height:28px;font-size:12px">W</div>Wife</div>
+            <div class="progress-bar-wrap"><div class="progress-bar-fill fill-wife" id="progress-wife" style="width:0%"></div></div>
+            <span class="stat-sub" id="progress-wife-label">0 of 12 lessons</span>
+          </div>
+          <div class="person-progress">
+            <div class="person-label"><div class="user-avatar avatar-husband" style="width:28px;height:28px;font-size:12px">H</div>Husband</div>
+            <div class="progress-bar-wrap"><div class="progress-bar-fill fill-husband" id="progress-husband" style="width:0%"></div></div>
+            <span class="stat-sub" id="progress-husband-label">0 of 12 lessons</span>
+          </div>
+        </div>
+      </div>
+      <div class="section-title">Continue Where You Left Off</div>
+      <div id="next-lesson-card"></div>
+    </div>
+    <div id="tab-lessons" style="display:none">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+        <div class="section-title" style="margin-bottom:0">All 12 Lessons</div>
+        <button class="print-btn" onclick="window.print()">🖨 Print My Study Notes</button>
+      </div>
+      <div class="lessons-grid" id="lessons-list"></div>
+    </div>
+    <div id="tab-journal" style="display:none">
+      <div class="section-title" style="margin-bottom:6px">My Personal Journal</div>
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:24px">All your reflections, bookmarks, insights, and prayers across the series in one place.</p>
+      <div id="journal-all"></div>
+    </div>
+    <div id="tab-exam" style="display:none">
+      <div id="exam-start-view">
+        <div class="exam-hero">
+          <div class="exam-hero-title">Final Examination</div>
+          <div class="exam-hero-sub">Revelation Knowledge | Knowing God in Christ · 24 Questions · Passing score: 75%</div>
+          <button class="start-exam-btn" onclick="startExam()">Begin Examination</button>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;color:var(--text-secondary);font-size:14px;line-height:1.7">
+          <strong style="color:var(--navy)">Before you begin:</strong> This exam covers all 12 lessons on Revelation Knowledge. It requires genuine understanding of Dr. Abel Damina's teaching on the finished work of Christ, your identity in Him, and the nature of revelation knowledge. Pray before you start. The Holy Spirit is your helper.
+        </div>
+      </div>
+      <div id="exam-questions-view" style="display:none"></div>
+      <div class="score-card" id="score-card">
+        <div class="score-big" id="score-display"></div>
+        <div class="score-label" id="score-sub"></div>
+        <div id="score-message" style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--navy);max-width:480px;margin:0 auto 24px;line-height:1.6"></div>
+        <button class="complete-btn" onclick="retakeExam()">Retake Exam</button>
+      </div>
+    </div>
+    <div id="tab-accountability" style="display:none">
+      <div class="section-title" style="margin-bottom:20px">Our Progress Together</div>
+      <div class="accountability-grid">
+        <div class="person-card">
+          <div class="person-card-header"><div class="person-card-avatar avatar-wife">W</div><div><div class="person-card-name">Wife</div><div class="person-card-sub" id="acc-wife-sub"></div></div></div>
+          <div class="lesson-dots" id="dots-wife"></div>
+        </div>
+        <div class="person-card">
+          <div class="person-card-header"><div class="person-card-avatar avatar-husband">H</div><div><div class="person-card-name">Husband</div><div class="person-card-sub" id="acc-husband-sub"></div></div></div>
+          <div class="lesson-dots" id="dots-husband"></div>
+        </div>
+      </div>
+      <div class="section-title" style="margin-bottom:16px">Exam Scores</div>
+      <div class="exam-compare">
+        <div class="exam-compare-card">
+          <div class="user-avatar avatar-wife" style="width:40px;height:40px;font-size:16px;margin:0 auto 8px">W</div>
+          <div class="exam-score-big" id="exam-score-wife" style="color:var(--blue)">—</div>
+          <div style="font-size:12px;color:var(--text-muted)">Wife's best score</div>
+        </div>
+        <div class="exam-compare-card">
+          <div class="user-avatar avatar-husband" style="width:40px;height:40px;font-size:16px;margin:0 auto 8px">H</div>
+          <div class="exam-score-big" id="exam-score-husband" style="color:var(--gold)">—</div>
+          <div style="font-size:12px;color:var(--text-muted)">Husband's best score</div>
+        </div>
+      </div>
+      <div class="section-title" style="margin-bottom:16px">Leave an Encouraging Note ✦</div>
+      <div class="note-form">
+        <textarea class="note-input" id="note-input" placeholder="Write an encouragement, insight, or prayer for your spouse..."></textarea>
+        <button class="send-note-btn" onclick="sendNote()">Send Note ✦</button>
+        <div class="notes-list" id="notes-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+const VOTD=[
+  {text:"That I may know him, and the power of his resurrection, and the fellowship of his sufferings.",ref:"Philippians 3:10"},
+  {text:"And this is eternal life, that they know you, the only true God, and Jesus Christ whom you have sent.",ref:"John 17:3"},
+  {text:"Grace and peace be multiplied to you in the knowledge of God and of Jesus our Lord.",ref:"2 Peter 1:2"},
+  {text:"For by grace you have been saved through faith. And this is not your own doing; it is the gift of God.",ref:"Ephesians 2:8"},
+  {text:"He is the image of the invisible God, the firstborn of all creation.",ref:"Colossians 1:15"},
+  {text:"The Spirit searches everything, even the depths of God.",ref:"1 Corinthians 2:10"},
+  {text:"Do not be conformed to this world, but be transformed by the renewal of your mind.",ref:"Romans 12:2"},
+  {text:"See what kind of love the Father has given to us, that we should be called children of God; and so we are.",ref:"1 John 3:1"},
+  {text:"It is finished.",ref:"John 19:30"},
+  {text:"In him the whole fullness of deity dwells bodily, and you have been filled in him.",ref:"Colossians 2:9-10"},
+  {text:"You did not receive the spirit of slavery to fall back into fear, but you have received the Spirit of adoption as sons.",ref:"Romans 8:15"},
+  {text:"The word of God is living and active, sharper than any two-edged sword.",ref:"Hebrews 4:12"}
+];
+
+const LESSONS=[
+  {num:1,title:"What Is Revelation Knowledge?",theme:"Sense knowledge vs revelation knowledge",
+   url:"https://www.youtube.com/embed/ZtGwiHNylG4",watch_url:"https://www.youtube.com/watch?v=ZtGwiHNylG4&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=14",
+   memory:{text:"The natural person does not accept the things of the Spirit of God, for they are foolishness to him; nor can he know them, because they are spiritually discerned.",ref:"1 Corinthians 2:14"},
+   questions:[
+     {q:"What is the fundamental difference between sense knowledge and revelation knowledge? Why can sense knowledge never fully reveal God?",verse:"1 Corinthians 2:14"},
+     {q:"In what way does revelation knowledge go beyond intellectual Bible study? What role does the Holy Spirit play in this process?",verse:"John 16:13"},
+     {q:"How has your relationship with God been shaped more by what you were taught about Him versus what He has personally revealed to you? Reflect honestly.",verse:"Galatians 1:12"},
+     {q:"Why does Dr. Damina emphasise that you cannot truly know God through your five senses alone? What are the limitations of this approach?",verse:"Isaiah 55:8-9"}
+   ],
+   flashcards:[
+     {q:"What is revelation knowledge?",a:"Knowledge of God received directly by the Holy Spirit — not from human intellect, senses, or tradition, but from God Himself revealing truth to your spirit."},
+     {q:"What is sense knowledge?",a:"Understanding gained through the five physical senses — sight, hearing, touch, taste, smell — which cannot perceive spiritual realities."},
+     {q:"Which scripture shows God's thoughts surpass human understanding?",a:"Isaiah 55:8-9 — 'For my thoughts are not your thoughts, neither are your ways my ways, declares the Lord.'"},
+     {q:"Who is the agent of revelation knowledge?",a:"The Holy Spirit — He guides believers into all truth (John 16:13) and reveals the things of God (1 Corinthians 2:10)."},
+     {q:"Why is revelation knowledge essential for knowing God?",a:"Because God is spirit, and spiritual truths must be spiritually discerned — the natural mind cannot receive the things of the Spirit (1 Cor 2:14)."}
+   ],
+   prayer:{heading:"Prayer for Revelation",prompt:"Ask the Holy Spirit to open the eyes of your understanding. Surrender your reliance on intellectual knowledge and invite God to reveal Himself to your spirit.",starter:"Holy Spirit, I acknowledge that my natural mind cannot fully know God. I surrender every human framework and ask You to grant me revelation knowledge. Open my eyes to see what You see..."}},
+  {num:2,title:"Christ as the Full Revelation of God",theme:"Jesus is the complete and final expression of the Father",
+   url:"https://www.youtube.com/embed/cnnjgPRsgLk",watch_url:"https://www.youtube.com/watch?v=cnnjgPRsgLk&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=12",
+   memory:{text:"He is the radiance of the glory of God and the exact imprint of his nature.",ref:"Hebrews 1:3"},
+   questions:[
+     {q:"Hebrews 1:3 says Jesus is the 'exact representation' of God's nature. What does this mean — is God exactly like Jesus?",verse:"Hebrews 1:3"},
+     {q:"Jesus said 'If you've seen me, you've seen the Father' (John 14:9). How does this challenge common perceptions of God as distant, angry, or punishing?",verse:"John 14:9"},
+     {q:"In what practical ways has knowing Jesus as the full revelation of God changed how you pray, worship, and relate to the Father daily?",verse:"Colossians 1:15"},
+     {q:"What was incomplete before Christ came, and what was made complete in Him according to Hebrews 1:1-2?",verse:"Hebrews 1:1-2"}
+   ],
+   flashcards:[
+     {q:"What does Hebrews 1:3 mean by 'exact representation'?",a:"Jesus is the precise, perfect, complete image of God's nature — what you see in Jesus is exactly who God is. No difference."},
+     {q:"What did Jesus mean in John 14:9?",a:"'Anyone who has seen me has seen the Father' — knowing Jesus is knowing God. Jesus is not just sent by God; He is God revealed in flesh."},
+     {q:"What is Colossians 1:15's description of Christ?",a:"'He is the image of the invisible God' — Christ makes the invisible God visible and knowable."},
+     {q:"How did God speak 'in these last days'? (Hebrews 1:1-2)",a:"Through His Son — the final, complete, and ultimate revelation of God, surpassing all prophets and prior revelation."},
+     {q:"What does it mean that all the fullness of God dwells in Christ?",a:"Colossians 2:9 — in Jesus, the totality of God's nature, power, love, and character is bodily present. Nothing of God is missing in Him."}
+   ],
+   prayer:{heading:"Prayer: Seeing the Father in Jesus",prompt:"Meditate on Jesus as the complete picture of God. Ask God to uproot any false images of Him and replace them with the revelation of who He truly is in Christ.",starter:"Father, I come to You through Jesus. Thank You that in Him I see Your face — full of grace, truth, and love. Remove every false picture I have formed of You and let me know You as You truly are..."}},
+  {num:3,title:"The Spirit of Wisdom and Revelation",theme:"Paul's prayer in Ephesians 1 — knowing God through the Spirit",
+   url:"https://www.youtube.com/embed/WlYGYTk9qEk",watch_url:"https://www.youtube.com/watch?v=WlYGYTk9qEk&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=10",
+   memory:{text:"That the God of our Lord Jesus Christ, the Father of glory, may give you the Spirit of wisdom and of revelation in the knowledge of him.",ref:"Ephesians 1:17"},
+   questions:[
+     {q:"Paul prays in Ephesians 1:17 for 'the spirit of wisdom and revelation' for already Spirit-filled believers. What does this suggest about the depth of knowing God?",verse:"Ephesians 1:17"},
+     {q:"What are the 'eyes of your heart' (Ephesians 1:18)? How are they different from natural eyes, and what do they perceive?",verse:"Ephesians 1:18"},
+     {q:"Reflect on the three things Paul prays we would know (Eph 1:18-19): the hope of His calling, the riches of His inheritance, and His great power. How well do you actually know these three things in your life?",verse:"Ephesians 1:18-19"},
+     {q:"How does depending on the Spirit of wisdom and revelation practically look different from simply studying theological books about God?",verse:"1 Corinthians 2:10-12"}
+   ],
+   flashcards:[
+     {q:"What does Paul mean by 'spirit of wisdom and revelation'? (Eph 1:17)",a:"A divine enabling — the Holy Spirit granting supernatural insight and unveiling of God's truth — so believers can truly know God beyond intellect."},
+     {q:"What are the 'eyes of the heart'? (Eph 1:18)",a:"The spiritual faculty of the inner man — the capacity of your born-again spirit to perceive and receive divine revelation."},
+     {q:"What three things does Paul pray we would know? (Eph 1:18-19)",a:"1. The hope of His calling. 2. The riches of His glorious inheritance in the saints. 3. His incomparably great power for those who believe."},
+     {q:"Why does Paul pray rather than teach in Ephesians 1:17?",a:"Because revelation knowledge cannot be taught — it must be given by God. It comes through prayer and spiritual opening, not mental effort alone."},
+     {q:"What does 1 Corinthians 2:10 say about how God's depths are known?",a:"'God has revealed them to us by his Spirit. The Spirit searches all things, even the deep things of God.'"}
+   ],
+   prayer:{heading:"Prayer: Eyes of the Heart Opened",prompt:"Pray Paul's prayer over yourself and your spouse. Ask the Father of glory to give you a spirit of wisdom and revelation so the eyes of your hearts may be enlightened.",starter:"Father of glory, I ask You to give me the spirit of wisdom and revelation in the knowledge of You. Open the eyes of my heart. Let me know the hope to which You have called me, the riches of Your inheritance, and the greatness of Your power..."}},
+  {num:4,title:"Grace and the Knowledge of God",theme:"Grace is the doorway to knowing God — not performance",
+   url:"https://www.youtube.com/embed/6odeUCDsdbA",watch_url:"https://www.youtube.com/watch?v=6odeUCDsdbA&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=9",
+   memory:{text:"Grace and peace be multiplied to you in the knowledge of God and of Jesus our Lord.",ref:"2 Peter 1:2"},
+   questions:[
+     {q:"How does a performance-based mindset block true revelation knowledge of God?",verse:"Romans 5:2"},
+     {q:"2 Peter 1:2 says grace and peace are multiplied 'through the knowledge of God.' What is the relationship between grace and knowing God more deeply?",verse:"2 Peter 1:2"},
+     {q:"Have you ever felt you needed to earn the right to hear from God or be close to Him? How does the teaching on grace challenge or affirm this?",verse:"Hebrews 4:16"},
+     {q:"If God's grace is unconditional and complete, what does striving and religious effort produce in our relationship with Him? What should replace it?",verse:"Galatians 3:2-3"}
+   ],
+   flashcards:[
+     {q:"What does 2 Peter 1:2 say grace is multiplied through?",a:"'Through the knowledge of God and of Jesus our Lord' — knowing God is the pathway to experiencing multiplied grace and peace."},
+     {q:"How does grace affect our access to God?",a:"Grace gives us bold, unconditional access to God — not based on merit, but on Christ's finished work. We approach the throne of grace freely (Heb 4:16)."},
+     {q:"What does Romans 5:2 say about our standing in grace?",a:"'Through him we have also obtained access by faith into this grace in which we stand' — our position before God is permanently established in grace."},
+     {q:"What does performance-based Christianity produce?",a:"A distorted view of God — making Him appear as a demanding judge rather than a loving Father — blocking genuine revelation knowledge."},
+     {q:"What replaces striving in the grace-based relationship with God?",a:"Resting in the finished work of Christ, trusting His love, and receiving revelation — not earning it through effort (Galatians 3:2-3)."}
+   ],
+   prayer:{heading:"Prayer: Resting in Grace",prompt:"Release every striving and performance before God. Declare your standing in grace and ask Him to deepen your knowledge of Him from a place of rest, not effort.",starter:"Father, I release every effort to earn Your presence. I stand in the grace You have freely given me through Christ. I come boldly to Your throne — not because I deserve to, but because Jesus has made the way. Teach me to know You from a place of rest..."}},
+  {num:5,title:"Your Identity in Christ",theme:"Who you are determines how you know God",
+   url:"https://www.youtube.com/embed/ozxW2gUdCbg",watch_url:"https://www.youtube.com/watch?v=ozxW2gUdCbg&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=8",
+   memory:{text:"Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come.",ref:"2 Corinthians 5:17"},
+   questions:[
+     {q:"How does not knowing who you are in Christ limit what God can reveal to you?",verse:"2 Corinthians 5:17"},
+     {q:"Ephesians 1:4-5 says you were chosen, holy, and adopted before the foundation of the world. How does understanding this truth change the way you relate to God?",verse:"Ephesians 1:4-5"},
+     {q:"What false identities (sinner, unworthy, not good enough) have you carried, and how have they distorted your understanding of God's character toward you?",verse:"1 John 3:1"},
+     {q:"If you truly believed you were righteous in Christ (2 Cor 5:21), not because of what you do but because of what Christ did, how would your prayer life and intimacy with God change?",verse:"2 Corinthians 5:21"}
+   ],
+   flashcards:[
+     {q:"What does 2 Corinthians 5:17 declare about every believer?",a:"'If anyone is in Christ, the new creation has come: the old has gone, the new is here!' — you are fundamentally new, not just forgiven."},
+     {q:"What does 2 Corinthians 5:21 mean for your identity?",a:"'God made him who had no sin to be sin for us, so that in him we might become the righteousness of God' — you are now the righteousness of God in Christ."},
+     {q:"What does Ephesians 1:4-5 say about when you were chosen?",a:"'Before the creation of the world' — your identity in Christ is not recent or conditional; it was established in God's eternal purpose."},
+     {q:"What is the danger of a 'sinner saved by grace' identity?",a:"It keeps your focus on what you were (sinner) rather than what you are (righteous, holy, beloved child of God) — hindering revelation of God's true nature toward you."},
+     {q:"What does 1 John 3:1 say about how God sees believers?",a:"'See what great love the Father has lavished on us, that we should be called children of God! And that is what we are!'"}
+   ],
+   prayer:{heading:"Prayer: Knowing Who You Are",prompt:"Declare your identity in Christ over yourself. Repent of false identities and receive God's declaration of who you are — righteous, chosen, and dearly loved.",starter:"Father, I receive what You say about me. I am Your child. I am the righteousness of God in Christ. I am chosen and holy. I renounce every lie that says I am not enough. I receive my true identity today..."}},
+  {num:6,title:"The Finished Work of Christ",theme:"Understanding what was fully accomplished at the cross",
+   url:"https://www.youtube.com/embed/TdGhnQP-Ruc",watch_url:"https://www.youtube.com/watch?v=TdGhnQP-Ruc&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=7",
+   memory:{text:"It is finished.",ref:"John 19:30"},
+   questions:[
+     {q:"Jesus said 'It is finished' (John 19:30). What exactly was finished? List as many dimensions as you can — spiritually, legally, relationally.",verse:"John 19:30"},
+     {q:"How does not fully grasping the finished work of Christ lead believers to live as if something still needs to be added, earned, or maintained in their salvation?",verse:"Hebrews 10:14"},
+     {q:"Dr. Damina teaches the finished work means God is not angry with believers and is not withholding blessing based on performance. How does this reshape your understanding of difficult seasons?",verse:"Romans 8:32"},
+     {q:"In what areas of your Christian life are you still 'working' for something that was already freely given? What would it look like to receive rather than strive?",verse:"Colossians 2:10"}
+   ],
+   flashcards:[
+     {q:"What did 'It is finished' (Tetelestai) mean in Greek?",a:"A commercial term meaning 'paid in full' — Jesus declared the entire debt of humanity fully settled. Nothing remains outstanding before God."},
+     {q:"What does Hebrews 10:14 say about the finished work?",a:"'For by one sacrifice he has made perfect forever those who are being made holy' — perfection is already accomplished, not being worked toward."},
+     {q:"What does Colossians 2:10 declare?",a:"'In Christ you have been brought to fullness' — believers are complete in Christ. Nothing is missing or lacking."},
+     {q:"What did the tearing of the temple veil signify?",a:"The barrier between God and humanity was permanently removed — direct, unhindered access to God is now available to all through Christ (Hebrews 10:19-20)."},
+     {q:"How does Romans 8:32 apply to the finished work?",a:"'He who did not spare his own Son... how will he not also, along with him, graciously give us all things?' — everything is freely given in Christ."}
+   ],
+   prayer:{heading:"Prayer: Resting in the Finished Work",prompt:"Meditate on the cross. Thank Jesus specifically for what was accomplished. Surrender any area where you have been striving to earn what is already yours.",starter:"Lord Jesus, I thank You for the cross. You said 'it is finished' — and I believe You. I receive the fullness of what You accomplished. I stop striving and I rest in Your completed work..."}},
+  {num:7,title:"Knowing God as Father",theme:"The revolutionary truth of God as Abba — Father",
+   url:"https://www.youtube.com/embed/63fy_NcQPvI",watch_url:"https://www.youtube.com/watch?v=63fy_NcQPvI&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=6",
+   memory:{text:"You did not receive the spirit of slavery to fall back into fear, but you have received the Spirit of adoption as sons, by whom we cry, 'Abba! Father!'",ref:"Romans 8:15"},
+   questions:[
+     {q:"Romans 8:15 says we received the spirit of adoption by whom we cry 'Abba, Father.' What does 'Abba' reveal about the kind of relationship God desires with you?",verse:"Romans 8:15"},
+     {q:"Many people project their earthly father's character onto God. How might a difficult or absent earthly father have shaped your image of God — and how does revelation knowledge correct this?",verse:"Matthew 7:11"},
+     {q:"Jesus only ever related to God as Father — never as an angry judge. What does following Jesus' example of prayer and intimacy with the Father look like in your life?",verse:"John 17:1-3"},
+     {q:"Dr. Damina teaches God is not reluctantly forgiving — He is eagerly and completely Father. How does the parable of the prodigal son illustrate revelation knowledge of God as Father?",verse:"Luke 15:20"}
+   ],
+   flashcards:[
+     {q:"What does 'Abba' mean and why is it significant?",a:"'Abba' is an Aramaic term of intimate family address — like 'Daddy.' It reveals God welcomes childlike intimacy, not formal religious distance."},
+     {q:"What does Romans 8:15 contrast: spirit of slavery vs spirit of adoption?",a:"Slavery = fear-based religion, earning approval. Adoption = belonging, security, and intimacy as a true child of God who belongs unconditionally."},
+     {q:"What does John 17:3 define as eternal life?",a:"'Now this is eternal life: that they know you, the only true God, and Jesus Christ, whom you have sent.' Knowing God IS eternal life."},
+     {q:"What did the father in Luke 15 do when the son was 'still a great way off'?",a:"He ran to him — revealing God's eagerness, not reluctance, to receive us. God runs toward the returning heart, not away from it."},
+     {q:"How does Matthew 7:11 describe God as Father?",a:"'How much more will your Father in heaven give good gifts to those who ask him!' — God gives generously, not grudgingly."}
+   ],
+   prayer:{heading:"Prayer: Knowing God as Father",prompt:"Approach God as Father — not as a religious duty but as a child coming home. Release any fear, distance, or formality and simply be with Him.",starter:"Abba, Father — I come to You as Your child. Not as a servant, not as a stranger, but as Your own beloved child. Heal every wrong picture I have carried of You. Let me experience the reality of Your fatherhood today..."}},
+  {num:8,title:"The Word and Revelation",theme:"How Scripture becomes living revelation, not just information",
+   url:"https://www.youtube.com/embed/gfcOuxoI-G4",watch_url:"https://www.youtube.com/watch?v=gfcOuxoI-G4&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=5",
+   memory:{text:"The word of God is living and active, sharper than any two-edged sword.",ref:"Hebrews 4:12"},
+   questions:[
+     {q:"What is the difference between reading the Bible as a religious exercise versus encountering it as the living Word — and how does one shift from one to the other?",verse:"Hebrews 4:12"},
+     {q:"Jesus said 'the words I speak to you are spirit and they are life' (John 6:63). What does it mean to receive God's Word spiritually rather than only intellectually?",verse:"John 6:63"},
+     {q:"Describe a time when a scripture 'came alive' to you — moved from information to revelation. What was different about that moment?",verse:"Psalm 119:130"},
+     {q:"Dr. Damina teaches that the logos becomes rhema through the Spirit. How do you practically position yourself for this to happen in your daily study?",verse:"Romans 10:17"}
+   ],
+   flashcards:[
+     {q:"What is the difference between logos and rhema?",a:"Logos = the written, general Word of God. Rhema = a specific, Spirit-breathed word that becomes alive and personal — revelation dropping into your spirit."},
+     {q:"What does Hebrews 4:12 say the Word of God does?",a:"It is living, active, sharper than a double-edged sword — it penetrates to soul and spirit, judging thoughts and attitudes of the heart."},
+     {q:"What does 2 Timothy 3:16-17 say about scripture?",a:"'All Scripture is God-breathed and useful for teaching, rebuking, correcting and training in righteousness.'"},
+     {q:"What does Psalm 119:130 say happens when God's Word enters?",a:"'The unfolding of your words gives light; it gives understanding to the simple' — revelation brings light and clarity."},
+     {q:"What does Romans 10:17 say faith comes from?",a:"'Faith comes from hearing the message, and the message is heard through the word about Christ' — revelation knowledge produces living faith."}
+   ],
+   prayer:{heading:"Prayer: Word Becoming Revelation",prompt:"Ask the Holy Spirit to be your teacher as you study. Pray that every scripture moves from ink on a page to living revelation that transforms you.",starter:"Holy Spirit, be my teacher. As I open Your Word, I ask You to breathe life into every scripture. Let the logos become rhema to me. Let Your Word not just inform my mind but transform my spirit..."}},
+  {num:9,title:"Prayer as Communion, Not Performance",theme:"Prayer as knowing God, not just making requests",
+   url:"https://www.youtube.com/embed/IgWqYcLhDO0",watch_url:"https://www.youtube.com/watch?v=IgWqYcLhDO0&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=4",
+   memory:{text:"And this is eternal life, that they know you, the only true God, and Jesus Christ whom you have sent.",ref:"John 17:3"},
+   questions:[
+     {q:"Dr. Damina teaches that prayer is fundamentally about communion — knowing God. How does this shift in understanding change your prayer life?",verse:"Philippians 4:6-7"},
+     {q:"Jesus prayed 'that they may know you' (John 17:3) — His prayer was about revelation and relationship. What does your prayer life reveal about whether you see prayer as communion or transaction?",verse:"John 17:3"},
+     {q:"What does it mean to 'pray in the Spirit' (Jude 1:20)? How does praying in the Spirit facilitate revelation knowledge beyond what our natural mind can access?",verse:"Jude 1:20"},
+     {q:"If you had no specific requests to make, would you still have something to say to God? What does your answer reveal about your relationship with Him?",verse:"Psalm 27:4"}
+   ],
+   flashcards:[
+     {q:"What is the primary purpose of prayer according to revelation knowledge teaching?",a:"Communion with God — knowing Him, being with Him, fellowshipping with His Spirit — not primarily getting things from Him."},
+     {q:"What did Jesus pray in John 17:3?",a:"'Now this is eternal life: that they know you, the only true God, and Jesus Christ, whom you have sent.' Knowing God is the ultimate goal of prayer."},
+     {q:"What does 1 Corinthians 14:2 say about praying in tongues?",a:"'Anyone who speaks in a tongue speaks mysteries by the Spirit' — praying in the Spirit allows direct spirit-to-Spirit communion beyond natural understanding."},
+     {q:"What does Psalm 27:4 reveal as David's one desire?",a:"'To dwell in the house of the Lord all the days of my life, to gaze on the beauty of the Lord.' Intimacy, not just answers."},
+     {q:"What does Philippians 4:7 promise results from prayer with thanksgiving?",a:"'The peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.'"}
+   ],
+   prayer:{heading:"Prayer: Simply Being With God",prompt:"Set aside your prayer list today. Simply come before God with no agenda — just to be with Him. Practice communion. Let Him lead the time.",starter:"Father, I come to You today not with a list — just to be with You. You are my greatest desire. I want to know You more than I want anything from You. I sit in Your presence now. Speak to me..."}},
+  {num:10,title:"Renewing the Mind for Revelation",theme:"How transformed thinking enables revelation knowledge",
+   url:"https://www.youtube.com/embed/f_Dg_bLI3J4",watch_url:"https://www.youtube.com/watch?v=f_Dg_bLI3J4&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=3",
+   memory:{text:"Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God.",ref:"Romans 12:2"},
+   questions:[
+     {q:"Romans 12:2 commands us to be 'transformed by the renewing of your mind.' What specifically needs renewing, and how does renewed thinking create space for revelation knowledge?",verse:"Romans 12:2"},
+     {q:"What wrong mindsets about God have you inherited — from culture, upbringing, or religion — that need to be renewed?",verse:"Isaiah 55:8-9"},
+     {q:"Philippians 4:8 instructs us to think on things that are true, noble, right, pure, lovely, admirable. How does what you consistently think about shape what God is able to reveal to you?",verse:"Philippians 4:8"},
+     {q:"2 Corinthians 10:5 speaks of 'taking every thought captive to the obedience of Christ.' What does this look like practically as a daily discipline?",verse:"2 Corinthians 10:5"}
+   ],
+   flashcards:[
+     {q:"What does Romans 12:2 command and why?",a:"'Be transformed by the renewing of your mind. Then you will be able to test and approve what God's will is' — renewed minds discern God's will."},
+     {q:"What is the result of a renewed mind according to Romans 12:2?",a:"The ability to prove what is the good, pleasing, and perfect will of God — revelation becomes accessible to a renewed mind."},
+     {q:"What does 2 Corinthians 10:5 instruct believers to do with thoughts?",a:"'Take captive every thought to make it obedient to Christ' — actively demolishing mental strongholds that contradict the knowledge of God."},
+     {q:"What is a 'stronghold' in the context of knowing God?",a:"A deeply entrenched wrong belief (e.g. 'God is punishing me') that blocks the revelation of God's true character and nature."},
+     {q:"How does Philippians 4:8 connect to revelation knowledge?",a:"By meditating on what is true and excellent, you align your mind with God's reality — creating the environment where revelation can flourish."}
+   ],
+   prayer:{heading:"Prayer: Mind Renewal",prompt:"Identify one wrong belief about God you carry. Bring it before Him, renounce it, and ask Him to replace it with revelation of truth.",starter:"Father, I bring You my mind. I acknowledge that my thinking about You has not always been accurate. I renounce every thought that has made You smaller or harsher than You are. Renew my mind with the truth of who You are in Christ..."}},
+  {num:11,title:"Living From Revelation — Faith That Sees",theme:"How revelation knowledge produces genuine, living faith",
+   url:"https://www.youtube.com/embed/qItFPCdAuOg",watch_url:"https://www.youtube.com/watch?v=qItFPCdAuOg&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=2",
+   memory:{text:"Now faith is the substance of things hoped for, the evidence of things not seen.",ref:"Hebrews 11:1"},
+   questions:[
+     {q:"Hebrews 11:1 defines faith as 'the substance of things hoped for, the evidence of things not seen.' How does revelation knowledge produce this kind of faith?",verse:"Hebrews 11:1"},
+     {q:"Dr. Damina teaches that faith is not a formula or mental decision — it is the natural response of a heart that has received revelation. How does this reframe how you pursue faith?",verse:"Romans 10:17"},
+     {q:"In your current life circumstances, where is God asking you to live from revelation knowledge rather than from what your senses or emotions tell you?",verse:"2 Corinthians 5:7"},
+     {q:"Abraham 'was fully persuaded that God had power to do what he had promised' (Romans 4:21). What is the difference between intellectual agreement with God's promises and full persuasion?",verse:"Romans 4:21"}
+   ],
+   flashcards:[
+     {q:"What is faith according to Hebrews 11:1?",a:"'The substance of things hoped for, the evidence of things not seen' — faith is the spiritual perception of God's reality before it is physically manifested."},
+     {q:"How does revelation knowledge produce faith?",a:"Romans 10:17: 'Faith comes from hearing the word about Christ.' When the Spirit reveals truth to your spirit, faith is the natural result — not effort."},
+     {q:"What does it mean to 'walk by faith, not by sight'? (2 Cor 5:7)",a:"Navigating life by what God has revealed — His promises, His character, His word — rather than by physical circumstances, feelings, or human reasoning."},
+     {q:"What made Abraham's faith extraordinary? (Romans 4:20-21)",a:"He did not waver in unbelief but was 'fully persuaded' God would do what He said — certainty that came from knowing God's character, not just His promises."},
+     {q:"What is the difference between mental agreement and revelation faith?",a:"Mental agreement says 'I believe that in theory.' Revelation faith says 'I know it is true — I have seen it in the Spirit' — producing action and rest simultaneously."}
+   ],
+   prayer:{heading:"Prayer: Faith That Sees",prompt:"Bring a situation where you are struggling to trust God. Ask the Holy Spirit to give you revelation of God's reality in that area so genuine faith rises naturally.",starter:"Holy Spirit, give me eyes to see what You see in my situation. I choose to walk by faith and not by sight. Give me revelation of Your reality so that living faith rises in me — not forced or performed, but arising from truly knowing You..."}},
+  {num:12,title:"The Ongoing Journey of Knowing God",theme:"Revelation knowledge is a lifelong walk, not a destination",
+   url:"https://www.youtube.com/embed/am3TMzWkwxo",watch_url:"https://www.youtube.com/watch?v=am3TMzWkwxo&list=PLxYu-KnelNBFCgGSg1nl1vT0xDbvYwINY&index=1",
+   memory:{text:"That I may know him and the power of his resurrection, and may share his sufferings, becoming like him in his death.",ref:"Philippians 3:10"},
+   questions:[
+     {q:"Philippians 3:10 was Paul's cry: 'That I may know Him.' Paul — the most theologically educated apostle — said this late in his life. What does this tell you about the nature of knowing God?",verse:"Philippians 3:10"},
+     {q:"Dr. Damina teaches that revelation knowledge is progressive — God reveals Himself in layers. How does this encourage you when your faith feels small?",verse:"Proverbs 4:18"},
+     {q:"Looking back over all 12 lessons — what is the single most significant revelation about God that has shifted in you? How has it changed something concrete in your life?",verse:"2 Corinthians 3:18"},
+     {q:"What does it look like for you and your spouse to commit together to a lifestyle of growing in revelation knowledge beyond this series? What specific practices will you put in place?",verse:"Ecclesiastes 4:12"}
+   ],
+   flashcards:[
+     {q:"What was Paul's consuming passion in Philippians 3:10?",a:"'That I may know him, and the power of his resurrection, and the fellowship of his sufferings' — knowing Christ was his supreme desire above all else."},
+     {q:"What does 2 Corinthians 3:18 say about progressive revelation?",a:"'We are being transformed into his image with ever-increasing glory' — knowing God is a progressive, continuous transformation from glory to glory."},
+     {q:"What does Proverbs 4:18 say about the path of the righteous?",a:"'The path of the righteous is like the morning sun, shining ever brighter till the full light of day' — revelation grows clearer as you walk with God."},
+     {q:"What does Jeremiah 9:23-24 identify as the greatest thing to know?",a:"'Let the one who boasts boast about this: that they understand and know me' — knowing God personally surpasses wisdom, strength, or wealth."},
+     {q:"What is the ultimate goal of revelation knowledge?",a:"Transformation into Christ's likeness — not just information about God, but genuine intimacy with God that makes you more like Him (2 Cor 3:18)."}
+   ],
+   prayer:{heading:"Prayer: A Lifetime With God",prompt:"Pray a covenant prayer — committing your life to the ongoing pursuit of knowing God. Include your spouse in your prayer. Make this a shared journey.",starter:"Father, this series has only been a beginning. Like Paul, I say 'that I may know You.' I commit my life to this pursuit. Together with my spouse, we choose to walk in revelation knowledge for the rest of our lives. Seal this commitment in our hearts today..."}}
+];
+
+const EXAM_QUESTIONS=[
+  {q:"According to Dr. Damina's teaching, which best describes why sense knowledge cannot fully reveal God?",opts:["God has deliberately hidden Himself from human perception","The five physical senses are limited to the material realm and cannot perceive spiritual realities","Humans are too sinful to perceive God","God only reveals Himself through dreams and visions"],answer:1},
+  {q:"In Hebrews 1:3, Jesus is described as the 'exact representation' of God's nature. What is the theological implication?",opts:["Jesus was one of several ways God has revealed Himself","To know Jesus is to know exactly who God is — His character and nature are identical","Jesus revealed only the loving side of God while the Father represents justice","The Old Testament gives a more complete picture of God than Jesus does"],answer:1},
+  {q:"Paul's prayer in Ephesians 1:17 asks for 'the spirit of wisdom and revelation' for already Spirit-filled believers. Why?",opts:["Because they had backslidden and lost the Spirit","Because knowing God has limitless depth — believers can always grow deeper in revelation","Because they had never truly received the Holy Spirit","Because revelation knowledge is only for mature leaders and apostles"],answer:1},
+  {q:"2 Peter 1:2 states that grace and peace are multiplied 'through the knowledge of God.' What does this reveal?",opts:["Grace is earned by increasing doctrinal knowledge","Deeper knowledge of God directly leads to experiencing more grace and peace","Grace multiplies through religious practice and discipline","Knowledge of theology multiplies grace, not personal knowledge of God"],answer:1},
+  {q:"Which scripture best supports why a performance-based mindset blocks revelation knowledge?",opts:["Galatians 3:2-3 — 'Did you receive the Spirit by works of the law, or by hearing with faith?'","Matthew 25:14 — the parable of the talents","Romans 2:6 — God rewards each person according to their deeds","James 2:17 — faith without works is dead"],answer:0},
+  {q:"What is the primary danger of maintaining a 'sinner saved by grace' identity after coming to Christ?",opts:["It shows appropriate humility before God","It focuses on what you were rather than what you now are in Christ — hindering revelation of God's true nature toward you","It is theologically incorrect because Christians never sin","It prevents water baptism"],answer:1},
+  {q:"When Jesus cried 'It is finished' (John 19:30), the Greek word was 'Tetelestai.' What was its commercial meaning?",opts:["The battle is over","I am dying","Paid in full — debt completely settled","The prophecies are fulfilled"],answer:2},
+  {q:"Romans 8:15 says believers received 'the spirit of adoption by whom we cry Abba, Father.' What does 'Abba' reveal?",opts:["God is a formal authority who demands respect and distance","God desires intimate, childlike closeness — not religious formality or fear","Abba means God is a provider, not a father","God relates differently to Jews than to Gentiles"],answer:1},
+  {q:"In the teaching on the Word and revelation, what is the distinction between 'logos' and 'rhema'?",opts:["Logos is the New Testament; rhema is the Old Testament","Logos is the spoken word in church; rhema is private prayer","Logos is the written Word of God; rhema is a specific Spirit-breathed word that becomes alive and personal","There is no meaningful distinction — they mean the same thing"],answer:2},
+  {q:"Which verse best captures the primary purpose of prayer as communion rather than transaction?",opts:["Matthew 6:7 — do not use vain repetitions","John 17:3 — 'that they may know you, the only true God'","Luke 18:1 — always pray and do not give up","Mark 11:24 — whatever you ask in prayer, believe you have received it"],answer:1},
+  {q:"Romans 12:2 commands transformation 'by the renewing of your mind.' In the context of revelation knowledge, what specifically needs to be renewed?",opts:["Your prayer techniques and methods","Wrong beliefs, distorted images of God, and thought patterns inherited from culture and religion","Your church attendance and spiritual disciplines","Only thoughts related to sin and moral failure"],answer:1},
+  {q:"How does revelation knowledge relate to producing genuine faith (Hebrews 11:1)?",opts:["Faith is produced by making a mental decision to believe","Faith is produced by confessing scripture loudly and repeatedly","When the Holy Spirit reveals truth to your spirit, genuine living faith arises naturally as a response","Faith comes from attending church services consistently"],answer:2},
+  {q:"In Philippians 3:10, Paul — deeply theologically educated — cried 'that I may know Him.' What does this reveal?",opts:["Paul felt he had made no spiritual progress","Revelation knowledge of God has limitless depth — even the greatest believers are always pressing deeper","Paul was uncertain of his own salvation","This refers only to knowing facts about the resurrection"],answer:1},
+  {q:"2 Corinthians 3:18 speaks of being 'transformed into his image with ever-increasing glory.' What process does this describe?",opts:["A one-time dramatic transformation at conversion","Transformation through religious effort and discipline","Progressive, continuous transformation through ongoing revelation — from glory to greater glory","Transformation that happens only after physical death"],answer:2},
+  {q:"What do the 'eyes of the heart' (Ephesians 1:18) perceive that natural eyes cannot?",opts:["Future events and prophecies exclusively","The spiritual realm, God's reality, His character, and His purposes — dimensions inaccessible to the five senses","Only one's own sin and shortcomings","The thoughts of other people"],answer:1},
+  {q:"What is the difference between intellectual agreement with God's promises and Abraham's 'full persuasion' (Romans 4:21)?",opts:["There is no meaningful difference","Full persuasion comes from revelation of God's character — knowing who He is produces certainty. Intellectual agreement lacks this inner knowing.","Full persuasion only comes through years of theological study","Full persuasion requires seeing miracles with your physical eyes first"],answer:1},
+  {q:"The father in Luke 15 ran to meet his son while 'still a great way off.' What does this reveal about God?",opts:["God rewards those who first prove their repentance through action","God eagerly, actively moves toward the returning heart — He is not reluctant or conditional in His welcome","God waits to see if repentance is genuine before responding","The father represents the Holy Spirit, not the Father"],answer:1},
+  {q:"How does taking thoughts captive (2 Corinthians 10:5) relate to growing in revelation knowledge?",opts:["It refers only to moral thoughts and temptations","Demolishing wrong mental strongholds — false beliefs about God — creates space for His truth to be received","It means memorising more scripture passages","It is a warfare strategy unrelated to knowing God"],answer:1},
+  {q:"Colossians 2:10 declares 'you have been brought to fullness in him.' Why is this foundational to revelation knowledge?",opts:["You are complete in Christ, approaching God from wholeness — not striving for worthiness","You must pursue holiness to know God — knowledge requires moral progress first","You are growing toward fullness — it is a gradual process of earning access","Fullness comes through spiritual gifts and miracles"],answer:0},
+  {q:"What is the practical implication of Isaiah 55:8-9 for approaching revelation knowledge?",opts:["We should rely primarily on human intelligence and theological logic","We must supplement prayer with philosophy to understand God","We must go beyond natural reasoning and position ourselves to receive what only the Holy Spirit can reveal","Knowing God is impossible until heaven"],answer:2},
+  {q:"1 Corinthians 2:14 states the natural person cannot receive the things of the Spirit. What does this mean for revelation knowledge?",opts:["Non-Christians should not study the Bible","Spiritual truths can only be received by a born-again spirit, in dependence on the Holy Spirit — not by natural intellect alone","Only professional theologians can understand God","Spiritual gifts are necessary before any biblical knowledge can be gained"],answer:1},
+  {q:"Psalm 27:4 reveals David's primary desire. How does this contrast with transactional prayer?",opts:["David primarily asked God for military victory","David's one desire was to dwell in God's presence and 'gaze on His beauty' — revealing that knowing and being with God was his supreme aim","David primarily sought wisdom and understanding about theology","David wanted God's provision above all else"],answer:1},
+  {q:"Proverbs 4:18 says 'the path of the righteous is like the morning sun, shining ever brighter.' How does this apply to revelation knowledge?",opts:["Revelation knowledge is equal for all believers at all times","Revelation knowledge grows progressively clearer and deeper as you walk with God — like dawn brightening into full light","Revelation only comes in dramatic, sudden experiences","Only those called to ministry experience growing revelation"],answer:1},
+  {q:"In light of the complete series, what is the ultimate purpose of all that Dr. Damina has taught on Revelation Knowledge?",opts:["To become more doctrinally accurate and theologically informed","To qualify believers for ministry positions and leadership","To bring believers into genuine, transformative, personal intimacy with God that changes them from the inside out — not merely information about God, but knowing Him","To teach believers how to claim their rights and blessings in Christ"],answer:2}
+];
+
+// ═══ STATE ═══
+let currentUser=null,currentLesson=null,currentFC=0,fcFlipped=false,fcKnown=0,fcTotal=0,examAnswers={};
+let state={
+  Wife:{completed:[],answers:{},insights:{},journals:{},timestamps:{},flashcardProgress:0,examScore:null,streak:0,lastStudyDate:null},
+  Husband:{completed:[],answers:{},insights:{},journals:{},timestamps:{},flashcardProgress:0,examScore:null,streak:0,lastStudyDate:null}
+};
+function save(){try{localStorage.setItem('rk_state',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('rk_state');if(s){const p=JSON.parse(s);['Wife','Husband'].forEach(u=>{if(p[u])Object.assign(state[u],p[u]);});}}catch(e){}}
+
+// ═══ STREAK ═══
+function updateStreak(){
+  const u=state[currentUser],today=new Date().toDateString();
+  if(u.lastStudyDate===today)return;
+  const yest=new Date(Date.now()-86400000).toDateString();
+  u.streak=(u.lastStudyDate===yest)?(u.streak||0)+1:1;
+  u.lastStudyDate=today;save();
+}
+
+// ═══ VOTD ═══
+function getVOTD(){const d=new Date();return VOTD[(d.getDate()+d.getMonth()*3)%VOTD.length];}
+
+// ═══ LOGIN ═══
+function login(user){
+  load();currentUser=user;updateStreak();
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('app').style.display='block';
+  const av=document.getElementById('topbar-avatar');
+  av.textContent=user[0];av.className='topbar-avatar '+(user==='Wife'?'avatar-wife':'avatar-husband');
+  document.getElementById('topbar-name').textContent=user;
+  document.getElementById('dash-name').textContent=user;
+  updateDashboard();renderLessons();renderAccountability();
+}
+function logout(){
+  currentUser=null;
+  document.getElementById('login-screen').style.display='flex';
+  document.getElementById('app').style.display='none';
+  document.querySelectorAll('.nav-tab')[0].click();
+}
+
+// ═══ TABS ═══
+function showTab(tab,btn){
+  ['dashboard','lessons','journal','exam','accountability'].forEach(t=>{
+    document.getElementById('tab-'+t).style.display=t===tab?'block':'none';
+  });
+  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if(tab==='accountability')renderAccountability();
+  if(tab==='journal')renderJournalAll();
+}
+
+// ═══ DASHBOARD ═══
+function updateDashboard(){
+  if(!currentUser)return;
+  const my=state[currentUser],sp=state[currentUser==='Wife'?'Husband':'Wife'];
+  const spouseName=currentUser==='Wife'?'Husband':'Wife';
+  document.getElementById('stat-lessons').textContent=my.completed.length+'/12';
+  document.getElementById('stat-streak').textContent=my.streak||0;
+  document.getElementById('stat-flashcards').textContent=my.flashcardProgress||0;
+  document.getElementById('stat-spouse').textContent=sp.completed.length+'/12';
+  document.getElementById('stat-spouse-name').textContent=spouseName+"'s lessons";
+  document.getElementById('streak-badge').textContent='🔥 '+(my.streak||0)+' day streak';
+  if(my.examScore!==null){
+    document.getElementById('stat-exam').textContent=my.examScore+'%';
+    document.getElementById('stat-exam-sub').textContent=my.examScore>=75?'Passed ✓':'Keep studying';
+  }
+  document.getElementById('progress-wife').style.width=(state.Wife.completed.length/12*100)+'%';
+  document.getElementById('progress-husband').style.width=(state.Husband.completed.length/12*100)+'%';
+  document.getElementById('progress-wife-label').textContent=state.Wife.completed.length+' of 12 lessons';
+  document.getElementById('progress-husband-label').textContent=state.Husband.completed.length+' of 12 lessons';
+  const v=getVOTD();
+  document.getElementById('votd-hero').textContent='"'+v.text+'"';
+  document.getElementById('votd-hero-ref').textContent='— '+v.ref;
+  document.getElementById('votd-text').textContent=v.text;
+  document.getElementById('votd-ref').textContent=v.ref;
+  const ni=Math.min(my.completed.length,11),nl=LESSONS[ni];
+  const card=document.getElementById('next-lesson-card');
+  if(my.completed.length===12){
+    card.innerHTML='<div style="background:var(--success-light);border:1px solid var(--success);border-radius:16px;padding:24px;color:var(--success);font-weight:500">🎉 You have completed all 12 lessons! Head to the Final Exam tab.</div>';
+  }else{
+    card.innerHTML='<div class="lesson-card" style="cursor:pointer" onclick="document.querySelectorAll(\'.nav-tab\')[1].click();setTimeout(()=>openLesson('+ni+'),100)"><div class="lesson-header"><div class="lesson-num">'+nl.num+'</div><div class="lesson-meta"><div class="lesson-title">'+nl.title+'</div><div class="lesson-sub">'+nl.theme+'</div></div><span style="color:var(--blue);font-size:20px">→</span></div></div>';
+  }
+}
+
+// ═══ LESSONS ═══
+function renderLessons(){
+  const c=document.getElementById('lessons-list');c.innerHTML='';
+  LESSONS.forEach((l,i)=>{
+    const done=state[currentUser].completed.includes(i);
+    const tsLen=((state[currentUser].timestamps||{})[i]||[]).length;
+    const div=document.createElement('div');div.className='lesson-card';div.id='lesson-card-'+i;
+    div.innerHTML='<div class="lesson-header" onclick="openLesson('+i+')"><div class="lesson-num '+(done?'completed':'')+'">'+
+      (done?'✓':l.num)+'</div><div class="lesson-meta"><div class="lesson-title">'+l.title+'</div>'+
+      '<div class="lesson-sub">'+l.theme+(tsLen?' · 🔖 '+tsLen+' bookmark'+(tsLen>1?'s':''):'')+'</div></div>'+
+      '<div class="lesson-badges"><span class="badge '+(done?'badge-done':'badge-pending')+'">'+(done?'Complete':'Study')+'</span></div></div>'+
+      '<div class="lesson-body" id="lesson-body-'+i+'"></div>';
+    c.appendChild(div);
+  });
+}
+
+function openLesson(i){
+  const body=document.getElementById('lesson-body-'+i);
+  if(body.classList.contains('open')){body.classList.remove('open');return;}
+  document.querySelectorAll('.lesson-body').forEach(b=>b.classList.remove('open'));
+  currentLesson=i;currentFC=0;fcFlipped=false;fcKnown=0;fcTotal=0;
+  body.innerHTML=buildLessonBody(i);
+  body.classList.add('open');
+  showStep(i,'questions');updateFC(i);
+}
+
+function buildLessonBody(i){
+  const l=LESSONS[i],done=state[currentUser].completed.includes(i);
+  return '<div class="complete-btn-bar"><div class="complete-btn-bar-text">Work through each step below — mark complete whenever you are ready.</div>'+
+    '<button class="complete-btn" id="complete-btn-'+i+'" onclick="markComplete('+i+')" '+(done?'disabled':'')+'>'+
+    (done?'✓ Lesson Complete':'Mark Lesson '+l.num+' Complete')+'</button></div>'+
+    buildTimestampBar(i)+
+    '<div class="scripture-memory"><div class="scripture-label">📖 Key Memory Verse</div>'+
+    '<div class="scripture-text" id="mem-text-'+i+'">'+l.memory.text+'</div>'+
+    '<div class="scripture-ref">'+l.memory.ref+'</div>'+
+    '<button class="hide-btn" onclick="toggleMemory('+i+')">Hide Text — Test Yourself</button></div>'+
+    '<div class="study-steps">'+
+    '<button class="step-pill active" id="pill-'+i+'-questions" onclick="showStep('+i+',\'questions\')">1. Reflection Questions</button>'+
+    '<button class="step-pill" id="pill-'+i+'-flashcards" onclick="showStep('+i+',\'flashcards\')">2. Flashcards</button>'+
+    '<button class="step-pill" id="pill-'+i+'-prayer" onclick="showStep('+i+',\'prayer\')">3. Prayer Prompts</button></div>'+
+    '<div id="step-questions-'+i+'" class="step-content active">'+buildQuestions(i)+'</div>'+
+    '<div id="step-flashcards-'+i+'" class="step-content">'+buildFlashcards(i)+'</div>'+
+    '<div id="step-prayer-'+i+'" class="step-content">'+buildPrayer(i)+'</div>';
+}
+
+// ═══ TIMESTAMP ═══
+function buildTimestampBar(i){
+  const ts=((state[currentUser].timestamps||{})[i]||[]);
+  const chips=ts.length?ts.map((t,idx)=>'<div class="ts-chip">⏱ <strong>'+t.time+'</strong>'+(t.note?' — '+t.note:'')+
+    '<span class="del" onclick="deleteTS('+i+','+idx+')">✕</span></div>').join(''):
+    '<span style="color:rgba(255,255,255,0.35);font-size:12px">No bookmarks yet — add one below</span>';
+  return '<div class="timestamp-bar"><div class="timestamp-title">📍 YouTube Bookmark — Note Where You Got To</div>'+
+    '<div class="timestamp-row">'+
+    '<input class="ts-in ts-time" id="ts-time-'+i+'" placeholder="e.g. 23:45" maxlength="8">'+
+    '<input class="ts-in ts-note" id="ts-note-'+i+'" placeholder="What was being taught at this point...">'+
+    '<button class="ts-save-btn" onclick="saveTS('+i+')">Save Bookmark</button></div>'+
+    '<div class="timestamp-saved" id="ts-saved-'+i+'">'+chips+'</div>'+
+    '<a class="watch-btn" href="'+LESSONS[i].watch_url+'" target="_blank">▶ Watch Part '+LESSONS[i].num+' on YouTube</a></div>';
+}
+
+function saveTS(i){
+  const t=document.getElementById('ts-time-'+i).value.trim();
+  const n=document.getElementById('ts-note-'+i).value.trim();
+  if(!t)return;
+  if(!state[currentUser].timestamps)state[currentUser].timestamps={};
+  if(!state[currentUser].timestamps[i])state[currentUser].timestamps[i]=[];
+  state[currentUser].timestamps[i].push({time:t,note:n});
+  save();
+  document.getElementById('ts-time-'+i).value='';
+  document.getElementById('ts-note-'+i).value='';
+  refreshTS(i);
+  const sub=document.querySelector('#lesson-card-'+i+' .lesson-sub');
+  if(sub){const len=state[currentUser].timestamps[i].length;sub.textContent=LESSONS[i].theme+' · 🔖 '+len+' bookmark'+(len>1?'s':'');}
+}
+
+function deleteTS(i,idx){
+  state[currentUser].timestamps[i].splice(idx,1);save();refreshTS(i);
+}
+
+function refreshTS(i){
+  const ts=state[currentUser].timestamps[i]||[];
+  const el=document.getElementById('ts-saved-'+i);
+  if(!el)return;
+  el.innerHTML=ts.length?ts.map((t,idx)=>'<div class="ts-chip">⏱ <strong>'+t.time+'</strong>'+(t.note?' — '+t.note:'')+
+    '<span class="del" onclick="deleteTS('+i+','+idx+')">✕</span></div>').join(''):
+    '<span style="color:rgba(255,255,255,0.35);font-size:12px">No bookmarks yet</span>';
+}
+
+function toggleMemory(i){
+  const txt=document.getElementById('mem-text-'+i);
+  const btn=document.querySelector('#lesson-body-'+i+' .hide-btn');
+  if(txt.style.visibility==='hidden'){txt.style.visibility='visible';if(btn)btn.textContent='Hide Text — Test Yourself';}
+  else{txt.style.visibility='hidden';if(btn)btn.textContent='Show Memory Verse';}
+}
+
+// ═══ STEPS ═══
+function showStep(i,step){
+  ['questions','flashcards','prayer'].forEach(s=>{
+    const c=document.getElementById('step-'+s+'-'+i);
+    const p=document.getElementById('pill-'+i+'-'+s);
+    if(c)c.classList.toggle('active',s===step);
+    if(p)p.classList.toggle('active',s===step);
+  });
+  if(step==='flashcards'){currentFC=0;fcFlipped=false;fcKnown=0;fcTotal=0;updateFC(i);}
+}
+
+// ═══ QUESTIONS ═══
+function buildQuestions(i){
+  const l=LESSONS[i],saved=(state[currentUser].answers||{})[i]||{};
+  const savedInsight=((state[currentUser].insights)||{})[i]||'';
+  const savedRatings=((state[currentUser].ratings)||{})[i]||{};
+  let h='<div class="questions-list">';
+  l.questions.forEach((q,qi)=>{
+    const r=savedRatings[qi]||null;
+    h+='<div class="question-item"><div class="question-text">'+q.q+'</div>'+
+      '<div class="question-verse">📖 '+q.verse+'</div>'+
+      '<textarea class="answer-area" placeholder="Write your reflection here first, then reveal the suggested insight below..." onchange="saveAnswer('+i+','+qi+',this.value)">'+
+      (saved[qi]||'')+'</textarea>'+
+      // Reveal button
+      '<div style="margin-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
+      '<button id="reveal-btn-'+i+'-'+qi+'" onclick="revealAnswer('+i+','+qi+')" style="background:var(--navy);color:white;border:none;padding:8px 16px;border-radius:8px;font-size:12px;cursor:pointer;font-family:\'DM Sans\',sans-serif;font-weight:500">💡 Reveal Suggested Insight</button>'+
+      '<span style="font-size:12px;color:var(--text-muted)">Write your answer first, then compare</span></div>'+
+      // Reveal panel
+      '<div id="reveal-panel-'+i+'-'+qi+'" style="display:none;margin-top:12px;background:linear-gradient(135deg,var(--navy) 0%,#1a3260 100%);border-radius:12px;padding:20px 24px;color:white;">'+
+      '<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:500;margin-bottom:10px">✦ Suggested Insight — Based on Dr. Abel Damina\'s Teaching</div>'+
+      '<div style="font-family:\'Cormorant Garamond\',serif;font-size:16px;line-height:1.7;color:rgba(255,255,255,0.9)">'+MODEL_ANSWERS[i][qi]+'</div>'+
+      // Self rating
+      '<div style="margin-top:16px;border-top:1px solid rgba(255,255,255,0.1);padding-top:14px">'+
+      '<div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.5);margin-bottom:10px">How well did you understand this?</div>'+
+      '<div style="display:flex;gap:8px;flex-wrap:wrap">'+
+      '<button id="rate-green-'+i+'-'+qi+'" onclick="saveRating('+i+','+qi+',\'green\')" style="padding:6px 14px;border-radius:999px;border:1.5px solid var(--success);color:var(--success);background:transparent;cursor:pointer;font-size:12px;font-family:\'DM Sans\',sans-serif;opacity:'+(r==='green'?'1':'0.5')+'">🟢 Got it deeply</button>'+
+      '<button id="rate-amber-'+i+'-'+qi+'" onclick="saveRating('+i+','+qi+',\'amber\')" style="padding:6px 14px;border-radius:999px;border:1.5px solid var(--gold);color:var(--gold);background:transparent;cursor:pointer;font-size:12px;font-family:\'DM Sans\',sans-serif;opacity:'+(r==='amber'?'1':'0.5')+'">🟡 Partly understood</button>'+
+      '<button id="rate-red-'+i+'-'+qi+'" onclick="saveRating('+i+','+qi+',\'red\')" style="padding:6px 14px;border-radius:999px;border:1.5px solid var(--danger);color:var(--danger);background:transparent;cursor:pointer;font-size:12px;font-family:\'DM Sans\',sans-serif;opacity:'+(r==='red'?'1':'0.5')+'">🔴 Need to revisit</button>'+
+      '</div></div></div></div>';
+  });
+  h+='</div><div class="insight-box" style="margin-top:24px"><div class="insight-label">✦ My Key Insight from This Lesson</div>'+
+    '<textarea class="insight-input" placeholder="What is the one revelation that stood out most to you from this lesson..." onchange="saveInsight('+i+',this.value)">'+
+    savedInsight+'</textarea></div>';
+  return h;
+}
+
+function saveAnswer(li,qi,val){
+  if(!state[currentUser].answers)state[currentUser].answers={};
+  if(!state[currentUser].answers[li])state[currentUser].answers[li]={};
+  state[currentUser].answers[li][qi]=val;save();
+}
+function saveInsight(li,val){
+  if(!state[currentUser].insights)state[currentUser].insights={};
+  state[currentUser].insights[li]=val;save();
+}
+
+// ═══ FLASHCARDS ═══
+function buildFlashcards(i){
+  const l=LESSONS[i];
+  return '<div class="flashcard-wrap" onclick="flipFC('+i+')">'+
+    '<div class="flashcard-inner" id="fc-inner-'+i+'">'+
+    '<div class="flashcard-front"><div class="flashcard-label">Question</div>'+
+    '<div class="flashcard-text" id="fc-q-'+i+'">Loading...</div>'+
+    '<div class="flashcard-hint">Tap to reveal answer</div></div>'+
+    '<div class="flashcard-back"><div class="flashcard-label">Answer</div>'+
+    '<div class="flashcard-text" id="fc-a-'+i+'"></div>'+
+    '<div class="flashcard-hint">Tap to flip back</div></div></div></div>'+
+    '<div class="flashcard-nav">'+
+    '<button class="fc-btn" onclick="changeFC('+i+',-1)">← Previous</button>'+
+    '<span class="fc-counter" id="fc-counter-'+i+'">1 / '+l.flashcards.length+'</span>'+
+    '<button class="fc-btn" onclick="changeFC('+i+',1)">Next →</button></div>'+
+    '<div class="fc-known-row">'+
+    '<button class="fc-known-btn fc-knew" onclick="markKnown('+i+',true)">✓ I knew this</button>'+
+    '<button class="fc-known-btn fc-didnt" onclick="markKnown('+i+',false)">✗ Still learning</button></div>'+
+    '<div class="fc-score" id="fc-score-'+i+'"></div>';
+}
+
+function flipFC(i){fcFlipped=!fcFlipped;const el=document.getElementById('fc-inner-'+i);if(el)el.classList.toggle('flipped',fcFlipped);}
+function changeFC(i,dir){
+  const l=LESSONS[i];currentFC=(currentFC+dir+l.flashcards.length)%l.flashcards.length;
+  fcFlipped=false;const el=document.getElementById('fc-inner-'+i);if(el)el.classList.remove('flipped');
+  updateFC(i);state[currentUser].flashcardProgress=(state[currentUser].flashcardProgress||0)+1;save();updateDashboard();
+}
+function updateFC(i){
+  const fc=LESSONS[i].flashcards[currentFC];
+  const q=document.getElementById('fc-q-'+i),a=document.getElementById('fc-a-'+i),c=document.getElementById('fc-counter-'+i);
+  if(q)q.textContent=fc.q;if(a)a.textContent=fc.a;if(c)c.textContent=(currentFC+1)+' / '+LESSONS[i].flashcards.length;
+}
+function markKnown(i,knew){
+  fcTotal++;if(knew)fcKnown++;
+  const sc=document.getElementById('fc-score-'+i);
+  if(sc)sc.textContent='Self-score: '+fcKnown+' / '+fcTotal+' known so far this session';
+  changeFC(i,1);
+}
+
+// ═══ PRAYER ═══
+function buildPrayer(i){
+  const p=LESSONS[i].prayer,saved=((state[currentUser].journals)||{})[i]||'';
+  return '<div class="prayer-box"><span class="prayer-icon">🙏</span>'+
+    '<div class="prayer-heading">'+p.heading+'</div>'+
+    '<p class="prayer-prompt">'+p.prompt+'</p>'+
+    '<div class="prayer-starter">'+p.starter+'</div></div>'+
+    '<div class="journal-section"><label class="journal-label">📓 My Personal Prayer Journal — Lesson '+LESSONS[i].num+'</label>'+
+    '<textarea class="journal-entry" placeholder="Continue the prayer in your own words, or write what God spoke to you during prayer..." onchange="saveJournal('+i+',this.value)">'+saved+'</textarea>'+
+    '<div class="journal-saved" id="journal-saved-'+i+'">✓ Saved</div></div>';
+}
+
+function saveJournal(i,val){
+  if(!state[currentUser].journals)state[currentUser].journals={};
+  state[currentUser].journals[i]=val;save();
+  const el=document.getElementById('journal-saved-'+i);
+  if(el){el.style.display='block';setTimeout(()=>{el.style.display='none';},2000);}
+}
+
+// ═══ COMPLETE ═══
+function markComplete(i){
+  if(state[currentUser].completed.includes(i))return;
+  state[currentUser].completed.push(i);save();updateDashboard();renderAccountability();
+  const btn=document.getElementById('complete-btn-'+i);
+  if(btn){btn.textContent='✓ Lesson Complete';btn.disabled=true;}
+  const num=document.querySelector('#lesson-card-'+i+' .lesson-num');
+  const badge=document.querySelector('#lesson-card-'+i+' .badge');
+  if(num){num.textContent='✓';num.className='lesson-num completed';}
+  if(badge){badge.textContent='Complete';badge.className='badge badge-done';}
+  launchConfetti();
+  setTimeout(()=>{
+    const body=document.getElementById('lesson-body-'+i);
+    if(body)body.classList.remove('open');
+    if(i<11)setTimeout(()=>openLesson(i+1),400);
+  },1400);
+}
+
+function launchConfetti(){
+  const cols=['#2563a8','#c9a84c','#16a34a','#dbeafe','#0f1f3d','#fef3c7'];
+  for(let n=0;n<50;n++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText='left:'+Math.random()*100+'vw;top:-20px;background:'+cols[Math.floor(Math.random()*cols.length)]+
+      ';width:'+(6+Math.random()*10)+'px;height:'+(6+Math.random()*10)+'px;'+
+      'border-radius:'+(Math.random()>0.5?'50%':'2px')+';'+
+      'animation-duration:'+(1.5+Math.random()*2)+'s;animation-delay:'+(Math.random()*0.5)+'s;';
+    document.body.appendChild(el);setTimeout(()=>el.remove(),3500);
+  }
+}
+
+// ═══ JOURNAL ALL ═══
+function renderJournalAll(){
+  const c=document.getElementById('journal-all');let h='';
+  LESSONS.forEach((l,i)=>{
+    const ans=(state[currentUser].answers||{})[i]||{};
+    const ins=((state[currentUser].insights)||{})[i]||'';
+    const jnl=((state[currentUser].journals)||{})[i]||'';
+    const ts=((state[currentUser].timestamps)||{})[i]||[];
+    const hasCont=Object.values(ans).some(v=>v)||ins||jnl||ts.length;
+    const done=state[currentUser].completed.includes(i);
+    if(!hasCont){
+      h+='<div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px 24px;margin-bottom:12px;opacity:0.5">'+
+        '<strong style="font-size:14px;color:var(--text-muted)">Lesson '+l.num+': '+l.title+'</strong>'+
+        '<p style="font-size:13px;color:var(--text-muted);margin-top:4px">No notes yet for this lesson.</p></div>';
+      return;
+    }
+    h+='<div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px">'+
+      '<div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:16px">'+
+      '<div class="lesson-num '+(done?'completed':'')+'" style="flex-shrink:0">'+(done?'✓':l.num)+'</div>'+
+      '<div><div style="font-weight:500;font-size:16px;color:var(--navy)">'+l.title+'</div>'+
+      '<div style="font-size:12px;color:var(--text-muted)">'+l.theme+'</div></div></div>';
+    if(ts.length){
+      h+='<div style="margin-bottom:16px"><div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--blue);font-weight:500;margin-bottom:8px">📍 YouTube Bookmarks</div>';
+      ts.forEach(t=>{h+='<div style="font-size:13px;color:var(--text-secondary);margin-bottom:4px">⏱ <strong>'+t.time+'</strong>'+(t.note?' — '+t.note:'')+'</div>';});
+      h+='</div>';
+    }
+    if(ins){
+      h+='<div style="margin-bottom:16px;padding:14px 18px;background:var(--gold-light);border-radius:10px;border-left:3px solid var(--gold)">'+
+        '<div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--warning);font-weight:500;margin-bottom:6px">✦ Key Insight</div>'+
+        '<div style="font-family:\'Cormorant Garamond\',serif;font-size:16px;color:var(--navy)">'+ins+'</div></div>';
+    }
+    l.questions.forEach((q,qi)=>{
+      if(!ans[qi])return;
+      h+='<div style="margin-bottom:14px;border-left:3px solid var(--sky-mid);padding-left:14px">'+
+        '<div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">'+q.q+'</div>'+
+        '<div style="font-size:14px;color:var(--text-primary);line-height:1.6">'+ans[qi]+'</div></div>';
+    });
+    if(jnl){
+      h+='<div style="margin-top:14px;padding:14px 18px;background:#f0f7ff;border-radius:10px;border-left:3px solid var(--blue)">'+
+        '<div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--blue);font-weight:500;margin-bottom:6px">🙏 Prayer Journal</div>'+
+        '<div style="font-size:14px;color:var(--text-primary);line-height:1.7;font-style:italic">'+jnl+'</div></div>';
+    }
+    h+='</div>';
+  });
+  c.innerHTML=h;
+}
+
+// ═══ EXAM ═══
+function startExam(){
+  examAnswers={};
+  document.getElementById('exam-start-view').style.display='none';
+  document.getElementById('score-card').style.display='none';
+  const view=document.getElementById('exam-questions-view');view.style.display='block';
+  let h='<div class="exam-progress-bar"><div class="exam-progress-fill" id="exam-prog" style="width:0%"></div></div>';
+  EXAM_QUESTIONS.forEach((q,qi)=>{
+    h+='<div class="exam-question"><div class="exam-q-num">Question '+(qi+1)+' of '+EXAM_QUESTIONS.length+'</div>'+
+      '<div class="exam-q-text">'+q.q+'</div><div class="exam-options">';
+    ['A','B','C','D'].forEach((lt,oi)=>{
+      h+='<div class="exam-option" id="opt-'+qi+'-'+oi+'" onclick="selectOpt('+qi+','+oi+')">'+
+        '<span class="option-letter">'+lt+'</span>'+q.opts[oi]+'</div>';
+    });
+    h+='</div></div>';
+  });
+  h+='<button class="exam-submit-btn" onclick="submitExam()">Submit Examination</button>';
+  view.innerHTML=h;
+}
+
+function selectOpt(qi,oi){
+  examAnswers[qi]=oi;
+  document.querySelectorAll('[id^="opt-'+qi+'-"]').forEach((el,i)=>el.classList.toggle('selected',i===oi));
+  const prog=document.getElementById('exam-prog');
+  if(prog)prog.style.width=Math.round(Object.keys(examAnswers).length/EXAM_QUESTIONS.length*100)+'%';
+}
+
+function submitExam(){
+  let correct=0;
+  EXAM_QUESTIONS.forEach((q,qi)=>{
+    const chosen=examAnswers[qi];
+    if(chosen!==undefined){
+      const ce=document.getElementById('opt-'+qi+'-'+chosen);
+      const re=document.getElementById('opt-'+qi+'-'+q.answer);
+      if(ce)ce.classList.add(chosen===q.answer?'correct':'wrong');
+      if(re)re.classList.add('correct');
+      if(chosen===q.answer)correct++;
+    }else{
+      const re=document.getElementById('opt-'+qi+'-'+q.answer);
+      if(re)re.classList.add('correct');
+    }
+  });
+  const pct=Math.round(correct/EXAM_QUESTIONS.length*100);
+  if(state[currentUser].examScore===null||pct>state[currentUser].examScore)state[currentUser].examScore=pct;
+  save();updateDashboard();
+  setTimeout(()=>{
+    document.getElementById('exam-questions-view').style.display='none';
+    const sc=document.getElementById('score-card');sc.style.display='block';
+    document.getElementById('score-display').textContent=pct+'%';
+    document.getElementById('score-sub').textContent=correct+' of '+EXAM_QUESTIONS.length+' correct · '+(pct>=75?'PASSED ✓':'Did not pass — try again');
+    let msg,col;
+    if(pct>=90){msg='Outstanding! You have demonstrated deep revelation knowledge of God in Christ. May this understanding bear much fruit in your walk with God.';col='var(--success)';}
+    else if(pct>=75){msg='Well done! You have a solid grasp of revelation knowledge. Review the questions you missed and continue growing in the knowledge of God.';col='var(--blue)';}
+    else if(pct>=60){msg='A good foundation — but some areas need deeper study. Revisit the lessons and flashcards for questions you found challenging, then retake the exam.';col='var(--warning)';}
+    else{msg='Keep pressing in! Revelation knowledge grows through persistence. Go back through the lessons prayerfully, spend time with each flashcard set, and try again.';col='var(--danger)';}
+    document.getElementById('score-display').style.color=col;
+    document.getElementById('score-message').textContent=msg;
+    if(pct>=75)launchConfetti();
+  },400);
+}
+function retakeExam(){document.getElementById('score-card').style.display='none';document.getElementById('exam-start-view').style.display='block';}
+
+// ═══ ACCOUNTABILITY ═══
+function renderAccountability(){
+  ['Wife','Husband'].forEach(u=>{
+    const dots=document.getElementById('dots-'+u.toLowerCase());
+    if(!dots)return;dots.innerHTML='';
+    for(let i=0;i<12;i++){
+      const done=state[u].completed.includes(i);
+      const dot=document.createElement('div');dot.className='lesson-dot '+(done?'dot-done':'dot-pending');
+      dot.textContent=i+1;dot.title='Lesson '+(i+1)+(done?' ✓':' — not yet complete');
+      dots.appendChild(dot);
+    }
+    const sub=document.getElementById('acc-'+u.toLowerCase()+'-sub');
+    if(sub)sub.textContent='🔥 '+(state[u].streak||0)+' day streak · '+state[u].completed.length+'/12 lessons';
+  });
+  const ws=state.Wife.examScore,hs=state.Husband.examScore;
+  document.getElementById('exam-score-wife').textContent=ws!==null&&ws!==undefined?ws+'%':'—';
+  document.getElementById('exam-score-husband').textContent=hs!==null&&hs!==undefined?hs+'%':'—';
+  renderNotes();
+}
+
+function sendNote(){
+  const inp=document.getElementById('note-input');const text=inp.value.trim();if(!text)return;
+  const notes=JSON.parse(localStorage.getItem('rk_notes')||'[]');
+  notes.push({from:currentUser,to:currentUser==='Wife'?'Husband':'Wife',text,time:new Date().toLocaleDateString()});
+  localStorage.setItem('rk_notes',JSON.stringify(notes));inp.value='';renderNotes();
+}
+function renderNotes(){
+  const list=document.getElementById('notes-list');if(!list)return;
+  const notes=JSON.parse(localStorage.getItem('rk_notes')||'[]');
+  if(!notes.length){list.innerHTML='<p style="color:var(--text-muted);font-size:13px;margin-top:12px">No notes yet. Encourage your spouse! ✦</p>';return;}
+  list.innerHTML=notes.slice().reverse().map(n=>'<div class="note-item"><div class="note-from">From '+n.from+' → '+n.to+' · '+n.time+'</div><div class="note-text">'+n.text+'</div></div>').join('');
+}
+
+
+// ═══ MODEL ANSWERS ═══
+const MODEL_ANSWERS = [
+  // Lesson 1
+  ["Sense knowledge operates through the five physical senses and can only perceive what is material. God is Spirit (John 4:24), existing in a dimension entirely beyond physical detection. The natural mind is constitutionally incapable of receiving spiritual realities (1 Cor 2:14). Revelation knowledge is imparted directly by the Holy Spirit to the born-again spirit, bypassing the limitations of the natural mind. Dr. Damina teaches this is why two people can read the same verse — one experiences a life-changing encounter, the other receives only information. The difference is not intelligence; it is revelation.",
+   "Intellectual Bible study produces knowledge ABOUT God — facts, doctrines, history. Revelation knowledge produces knowledge OF God — a living, experiential encounter that transforms the knower. The Holy Spirit is not optional — He is the only one who can reveal the depths of God (1 Cor 2:10). He takes the written Word (logos) and makes it come alive as a personal, Spirit-breathed word (rhema) within our spirit. Without Him, even the most thorough study produces religious information rather than transforming revelation.",
+   "Most of us began our faith shaped by what others taught us about God — denominations, pastors, family traditions. These can carry partial truth or distortion. Genuine revelation requires a personal, direct encounter with God through the Holy Spirit that supersedes secondhand information. Paul states in Galatians 1:12 that he received the gospel not from any human but through direct revelation of Jesus Christ. The invitation is to move from a faith built on what you have been told to a faith built on what God has personally revealed to your spirit.",
+   "Isaiah 55:8-9 makes the distance explicit: God's thoughts and ways are as far above ours as the heavens are above the earth. Our five senses are designed for the created world — they perceive light, sound, matter. But God exists outside His creation as uncreated Spirit. We can observe creation and conclude there is a Creator (Romans 1:20), but we cannot know His character, love, or heart through nature alone. This is precisely why God sent the Holy Spirit — to bridge the gap between infinite divine reality and finite human perception."],
+  // Lesson 2
+  ["Hebrews 1:3 uses the Greek word 'charakter' — an exact engraving, a precise stamp. Whatever you see Jesus doing in the Gospels IS God. Jesus healed the sick — that is God healing. Jesus welcomed sinners — that is God welcoming. Jesus wept at Lazarus's tomb — that is God moved with compassion. Dr. Damina teaches there is no hidden version of God behind Jesus who is harsher or more demanding. There is no 'angry Father' and 'merciful Son.' If you want to know exactly what God is like, look at Jesus — completely and without remainder.",
+   "This statement from John 14:9 dismantles the false idea that God the Father is a stern judge while Jesus is the merciful mediator. God is not reluctantly tolerant, barely containing His wrath. He is the Father who runs toward the returning prodigal. He is the shepherd who leaves 99 to find one lost. Dr. Damina consistently teaches that any image of God that looks unlike Jesus is simply wrong — and must be surrendered in favour of the revelation given in Christ. The cross was not God being persuaded to love us; it was God expressing the love He already had.",
+   "Knowing Jesus as the complete revelation of God means we no longer approach God with religious fear or suspicion. We no longer pray apologetically, wondering if God is angry. Our worship becomes joyful rather than dutiful. Our intimacy grows because we are no longer trying to relate to an abstract deity but to the God whose face we have seen in Jesus Christ. Colossians 1:15 says Christ is the image of the invisible God — He has made the unknowable knowable. Every prayer, every approach to God, is now an approach to the One Jesus revealed.",
+   "Hebrews 1:1-2 says God spoke 'in many portions and in many ways' through the prophets, but 'in these last days He has spoken to us in His Son.' The Son is not one more instalment — He is the final, complete, and definitive word. Everything before Christ pointed toward Him; everything after is understood through Him. Dr. Damina teaches that reading the Old Testament correctly means reading it through the lens of Christ, not reading Christ through the lens of Old Testament judgment. What was partial and typological has been fulfilled and completed in the person of Jesus."],
+  // Lesson 3
+  ["Paul was writing to Spirit-filled believers, yet prays as though there is far more for them to know. This reveals: knowing God is not a one-time event at conversion — it is a lifelong journey of ever-deepening revelation. Salvation gives access to the fullness of God, but experiencing that fullness requires ongoing revelation. Even Paul himself cried 'that I may know Him' (Phil 3:10) late in his apostolic ministry. The prayer also tells us that growing in the knowledge of God is not automatic — it requires intentional dependence on the Holy Spirit and a heart that actively seeks revelation rather than settling for information.",
+   "The 'eyes of the heart' refer to the spiritual perception of the inner man — the born-again spirit's capacity to see and receive divine revelation. Natural eyes perceive the physical world; the eyes of the heart perceive spiritual reality — God's nature, your identity in Christ, His purposes. Paul prays for these eyes to be 'enlightened' — literally flooded with light. Just as physical eyes need light to see, the eyes of the heart need the illuminating work of the Holy Spirit to perceive what cannot be seen naturally. Dr. Damina teaches that most Christians live below their spiritual perception capacity because these eyes remain dim through lack of revelation.",
+   "The hope of His calling is the confident expectation of everything God has destined for you — your eternal purpose and identity in Him. The riches of His glorious inheritance refers to what God considers His inheritance: His people — you are His treasure. His incomparably great power is the same resurrection power that raised Christ from the dead, now available to every believer (Eph 1:19-20). Most Christians intellectually acknowledge these truths but do not experientially know them. Knowing them by revelation means they become the foundation from which you live — not future hopes, but present realities that shape daily confidence and prayer.",
+   "Studying theological books produces knowledge that originates in human minds — even the best theology is still a human interpretation. It flows from mind to mind. Depending on the Spirit of wisdom and revelation means positioning yourself to receive truth that flows from God's Spirit to your spirit — bypassing the limitations of human interpretation. Practically: approaching Bible reading prayerfully, inviting the Holy Spirit to be your teacher before you open Scripture, pausing when something stirs in your spirit, and prioritising encounter over information. Revelation rarely comes to a hurried, distracted mind."],
+  // Lesson 4
+  ["Performance-based Christianity creates a distorted internal image of God — a demanding employer who only rewards adequate output. When we believe our access to God depends on how well we have prayed or how holy we have behaved, we approach Him with fear or shame — neither of which is the posture for genuine revelation. Revelation knowledge flows from intimacy and rest, not striving. Romans 5:2 says we 'stand' in grace — a settled position, not something earned moment by moment. When we are striving to earn God's favour, we cannot simultaneously be resting in His presence — and it is in rest and trust that He reveals Himself most deeply.",
+   "2 Peter 1:2 presents a profound truth: grace and peace are not multiplied through more religious activity or effort — they multiply as your personal knowledge of God deepens. The pathway to experiencing more of God's grace is not trying harder — it is knowing God more. As you grow in revelation of His unconditional love, His finished work, His fatherly character, grace becomes more real and more practically transforming. Dr. Damina teaches that this is why revelation knowledge is not a luxury for advanced Christians — it is the very engine of the grace-filled life. The more you know Him, the more grace flows.",
+   "One of the most common distortions in Christian experience is feeling that God is more accessible after a good quiet time, or more distant after a period of failure — measuring access to God by personal output. The grace-based reality is Hebrews 4:16: we come BOLDLY to the throne of grace — not to the throne of our own righteousness. The invitation is unconditional and permanent, based entirely on what Christ has done. Dr. Damina teaches that God never has a 'bad day' toward you — His welcome is not determined by your morning. This replaces religious anxiety with confident, open-hearted communion.",
+   "Striving and religious effort in the context of grace produce exhaustion, shame cycles, and a distorted view of God. When we work for what has already been freely given, we implicitly deny the sufficiency of Christ's work. Galatians 3:2-3 rebukes this: having begun in the Spirit, we cannot be perfected in the flesh. What should replace striving is receiving — actively, consciously, gratefully receiving what Christ has already secured: righteousness, access, favour, peace, identity. The posture of receiving is not passive — it is deeply active faith that says 'I trust what Christ has done more than I trust what I can do.' From that place of rest, genuine fruit flows naturally."],
+  // Lesson 5
+  ["Your identity shapes the lens through which you perceive God and the confidence with which you approach Him. If you see yourself primarily as a sinner — even a forgiven one — you will unconsciously expect God to relate to you based on your failures. 2 Corinthians 5:17 declares you are a new creation — the old has gone. Dr. Damina teaches that revelation knowledge of God is directly linked to revelation of who you are in Christ, because how you see yourself determines how you expect God to see you. A child who knows they are loved comes boldly to their father; one who suspects rejection holds back.",
+   "Ephesians 1:4-5 places your identity in eternity past — before time began, before you could do anything to earn or lose it. God chose you 'in Him' before the foundation of the world. This is not a response to your performance; it is the expression of God's sovereign, eternal love. You no longer come to God as a stranger trying to gain access — you come as one who was always known, always chosen, always loved. The Father does not relate to you based on your most recent spiritual report card. He relates to you based on His eternal choice of you in Christ — and that never changes.",
+   "False identities are perhaps the most powerful hidden blockers in the Christian life. If you carry 'I am not good enough,' you project it onto God — imagining He sees you as your inner critic sees you. 1 John 3:1 says consider 'what kind of love' the Father has lavished on us — the implication is that it is astonishing, extravagant, and perhaps difficult to fully receive. The correction to false identity is not willpower but revelation — the Holy Spirit bearing witness with our spirit that we are children of God (Romans 8:16). Encountering that witness transforms identity from the inside out.",
+   "A genuine revelation of righteousness in Christ would transform prayer from petition to communion, from begging to receiving, from uncertainty to boldness. 2 Corinthians 5:21 says you have 'become' the righteousness of God in Christ — this is not a positional label to grow into; it is a present reality. If this were truly known by revelation, you would approach God without guilt, without the sense that your prayers are hindered by recent failures, without needing to qualify before being 'worthy' to be heard. Dr. Damina teaches that many Christians never experience the depth of intimacy available to them precisely because they have not received revelation of who they are in Him."],
+  // Lesson 6
+  ["'Tetelestai' — 'It is finished' — was used in three key ancient contexts: commercially (a debt paid in full), legally (a sentence fully served), and sacrificially (an offering accepted). Jesus declared that every dimension of the barrier between God and humanity was permanently and completely resolved. Spiritually: sin was atoned for, death's power broken, and the separation caused by the fall reversed. Legally: the law's demands were fully satisfied — not bypassed, but fulfilled. Relationally: the temple veil tore, ending the separation between God and humanity forever. Dr. Damina teaches that 'finished' means nothing remains to be added — not by your effort, your suffering, or your religious performance.",
+   "When believers have not grasped the finished work, they unconsciously live as though salvation is a starting point from which they must earn ongoing acceptance. This manifests as: praying for forgiveness for sins already forgiven; feeling God's blessing depends on current performance; believing difficult circumstances are punishment. Hebrews 10:14 dismantles this: 'by one sacrifice he has made perfect forever.' 'Perfect' means complete, lacking nothing. 'Forever' leaves no room for daily re-earning. Dr. Damina consistently teaches that most of what people call 'spiritual struggle' is actually the exhausting effort to add to what Christ has already perfectly completed.",
+   "Romans 8:32 asks a rhetorical question whose answer reshapes everything: if God did not spare His own Son but gave Him for us all, 'how will he not also, along with him, graciously give us all things?' The hardest thing has already been done. The cross was God's ultimate act of provision; everything else flows from it. This means unanswered prayer, difficult seasons, or periods of silence are not evidence of God's anger or withholding. Dr. Damina teaches that God is never reluctantly blessing, never rationing grace based on your recent behaviour. Punishment fell on Christ at the cross — it cannot fall on those who are in Christ.",
+   "Common areas where Christians strive for what is already given include: righteousness (already given — 2 Cor 5:21), healing (already purchased — Isaiah 53:5), acceptance (already secured — Ephesians 1:6), peace with God (already established — Romans 5:1). Receiving rather than striving looks like prayer that says 'Thank You that this is already mine' rather than 'Please give me this.' It looks like faith that acts on what Christ has done rather than working toward what He might do if sufficiently impressed. This is not passivity — it is the most active form of faith: trusting the finished work more than your own effort."],
+  // Lesson 7
+  ["'Abba' is not a formal title — it is a term of intimate family relationship, closer to 'Daddy' than to the formal 'Father' of religious address. Its use reveals the kind of relationship God desires: proximity, trust, security, and childlike openness — not religious distance, protocol, or performance. Romans 8:15 contrasts this with 'the spirit of slavery' which produces fear — a transactional, performance-based relating to God where love feels conditional. Dr. Damina teaches that most religious Christianity operates in the spirit of slavery without realising it — approaching God with the anxiety of a servant rather than the confidence of a beloved child.",
+   "Our earliest experience of fatherhood inevitably shapes our unconscious image of God. An absent father may produce a sense that God is distant. A harsh father may produce a God-image of someone never quite satisfied. Jesus, however, never related to God with fear or anxiety — He prayed with intimacy, confidence, and certainty of being heard. Matthew 7:11 uses the imperfection of earthly fathers as a floor, not a ceiling: 'how MUCH MORE will your heavenly Father...' The revelation that corrects a broken father-image is the encounter with God through the Holy Spirit bearing witness that you are His child (Romans 8:16) — an experiential knowing, not just a doctrine.",
+   "Jesus's prayer life reveals unbroken, intimate communion with the Father — not formal petition sessions but ongoing conversation. In John 17, He prays with the familiarity of one who has always been with the Father. Following this example means prayer becomes conversation rather than performance; approaching God with the expectation of being heard, welcomed, and answered that a loved child has with a good father. It means not measuring God's willingness to hear by your recent spiritual record, but by His unchanging fatherly character. Dr. Damina teaches that many Christians pray hoping God is listening — Jesus prayed knowing the Father always heard Him (John 11:42).",
+   "Three details in the prodigal son parable reveal revelation knowledge: first, the father saw the son 'while he was still a great way off' — God is watching for our return, not indifferent. Second, he 'ran' — God moves toward us before we fully arrive. Third, he called for a robe, ring, and party before the son finished his confession — restoration preceded complete repentance. Dr. Damina emphasises that the father is not reluctantly forgiving but extravagantly, joyfully welcoming. This is not an unusual exception to God's character; it IS God's character revealed by Jesus. The prodigal son's father is God's own self-portrait."],
+  // Lesson 8
+  ["Reading the Bible as a religious exercise treats it as a text to be intellectually processed — like a history book or rule book. Encountering it as the living Word means approaching it as God's living voice, expecting the Holy Spirit to breathe life into specific scriptures for your specific situation. Hebrews 4:12 says the Word is 'living and active' — present tense, ongoing activity. The shift happens primarily through invitation: before reading, consciously inviting the Holy Spirit to be your teacher (John 14:26), approaching Scripture with expectancy rather than duty, and slowing down enough to let a verse settle in your spirit rather than rushing through chapters.",
+   "Receiving God's Word spiritually means allowing it to descend from the level of the mind to the level of the spirit — where it produces faith, transformation, and life. John 6:63 is striking: Jesus says 'the words I have spoken to you — they are full of the Spirit and life.' The same verse can be read a hundred times with no effect and then on the hundred-and-first reading it ignites something deep within — not because the verse changed, but because in that moment it was received spiritually. Dr. Damina teaches that we must learn to receive the Word with our spirit, not just process it with our mind — which requires stillness, expectancy, and dependence on the Holy Spirit.",
+   "When a scripture 'comes alive,' several things typically distinguish that moment: there is a sense of immediacy — the verse feels personally addressed, not generally applicable. There is often inner warmth, clarity, or conviction — a sense of recognition, as though your spirit already knew this truth and is now seeing it confirmed. Psalm 119:130 captures it: 'The unfolding of your words gives light' — the word 'unfolding' implies a moment of opening, of revelation breaking through. The difference from ordinary reading is the presence of the Holy Spirit actively illuminating the Word rather than you simply processing it with natural comprehension.",
+   "Practically positioning yourself for logos to become rhema involves: approaching Scripture with prayer and invitation before reading; reading slowly and meditatively rather than for volume; pausing when a verse stirs something in your spirit and sitting with it; journaling what the Spirit highlights; reading Scripture aloud (Romans 10:17 says faith comes from 'hearing'); and combining Scripture reading with worship, which creates an atmosphere receptive to the Spirit's work. Dr. Damina also teaches the importance of speaking the Word — declaring it out loud engages your voice, hearing, and faith simultaneously, creating greater opportunity for revelation to ignite within."],
+  // Lesson 9
+  ["When prayer is primarily a request list, God becomes a cosmic vending machine rather than a Father to be known. The relationship becomes entirely transactional — we come to get things and leave when done. Shifting to communion means the primary question changes from 'What do I need from God?' to 'How can I know God more deeply?' Dr. Damina teaches that the answers to prayer are a byproduct of the relationship, not the goal of it. When we seek first the King Himself — first the kingdom — everything else follows (Matthew 6:33). This shift transforms prayer from a duty to be performed into a relationship to be enjoyed and a Person to be known.",
+   "Jesus's prayer in John 17 is the most revealing window into His prayer life, and its dominant theme is not petition but relationship — He prays for His disciples to know the Father as He knows the Father. The final goal of His intercession is that the love the Father has for Jesus would be in His disciples (John 17:26). If most of your prayer time is requests, you are missing the dimension of communion. Dr. Damina teaches that God's greatest desire is not to answer your prayers — it is for you to know Him. Answered prayers are His means to that end, not the end itself. Communion-based prayer reorganises the entire relationship with God.",
+   "Praying in the Spirit (in tongues, as Jude 1:20 implies and 1 Corinthians 14:2 confirms) allows the born-again spirit to communicate directly with God, bypassing the limitations of the natural mind. Paul says in 1 Corinthians 14:14 that when he prays in tongues, 'his spirit prays' — the natural mind is not engaged. The Holy Spirit prays through the believer's spirit in perfect alignment with God's will. Dr. Damina teaches that praying in the Spirit is one of the primary ways revelation knowledge is cultivated — because it is spirit-level communion, not mind-level petition. It builds up the inner man (Jude 1:20) and creates deeper sensitivity to God's voice.",
+   "This question is diagnostic. If prayer feels empty without a request list — if silence with God feels awkward or purposeless — it reveals a primarily transactional rather than communal relationship with God. Psalm 27:4 shows what mature intimacy looks like: David's 'one thing' was simply to be in God's presence and gaze upon His beauty — not to receive anything particular, just to be with Him. The ability to be with God comfortably, without agenda, in silence and stillness, is a mark of genuine intimacy. Dr. Damina teaches that the goal of the Christian life is not what God does for you — it is God Himself. When He becomes your desire, not just your resource, prayer is transformed."],
+  // Lesson 10
+  ["Romans 12:2 specifies the mechanism of transformation: the renewing of the mind. What needs renewing are the deep mental frameworks — the embedded beliefs and assumptions — through which we perceive God, ourselves, and reality. These were formed before conversion by culture, family, religion, trauma, and experience. Salvation renews the spirit but not automatically the mind. The most critical things needing renewal are our beliefs about God's character: Is He angry or loving? Distant or present? Withholding or generous? Conditional or unconditional? Dr. Damina teaches that a renewed mind does not just know the right doctrine — it actually thinks from within a true picture of who God is, which transforms how it interprets every experience.",
+   "Common inherited wrong mindsets about God include: God is primarily concerned with punishment and justice (from performance-based religion); God helps those who help themselves (cultural individualism applied to faith); God is testing you through suffering (misapplication of Old Covenant frameworks); God's blessing is proportional to your faithfulness (merit-based thinking). These mindsets create a false picture of God that blocks genuine revelation — because revelation of who God truly is will always conflict with these embedded assumptions, and the unrenewed mind instinctively resists what conflicts with its framework. Renewal is not improvement of existing thinking but replacement with an entirely new framework rooted in grace.",
+   "Philippians 4:8 gives us a filter for thought: true, noble, right, pure, lovely, admirable, excellent, praiseworthy. Applied to thoughts about God, this means consistently meditating on what is TRUE about Him — not what fear or religious tradition suggests. What we consistently meditate on shapes the mind's condition — and its condition directly affects receptivity to revelation. A mind filled with worry and accusation becomes a closed environment for revelation. A mind renewed through consistent meditation on God's grace, goodness, and faithfulness becomes increasingly open and sensitive to the Holy Spirit's voice. Your inner thought world is not incidental to your spiritual life — it is the soil in which revelation either flourishes or withers.",
+   "Taking every thought captive to Christ means examining thoughts — especially about God — and subjecting them to the standard of revealed truth in Scripture. When a thought arises ('God is disappointed in me,' 'God is punishing me through this illness'), the practice is: identify the thought, bring it to the light of what Scripture says about God's character and your identity in Christ, and consciously reject thoughts that do not align with revelation. This is not positive thinking — it is theological discernment applied moment by moment. Dr. Damina teaches that strongholds are demolished not by ignoring wrong thoughts but by actively replacing them with the revealed knowledge of God — a daily, moment-by-moment practice that progressively renews the mind."],
+  // Lesson 11
+  ["Hebrews 11:1 describes faith as 'substance' and 'evidence' — both words imply tangible reality. Faith is not wishful thinking; it is the spiritual faculty that perceives and lays hold of realities that exist in the Spirit before they are manifested physically. When the Holy Spirit reveals a truth to your spirit — about God's character, His promises, His will — faith is the natural, spontaneous response. You do not have to manufacture or work it up. Just as physical eyes produce certainty about what they see without effort, the eyes of the heart (Eph 1:18) produce certainty about spiritual realities when revelation comes. Dr. Damina teaches that faith is the echo of revelation — it arises wherever genuine revelation has landed.",
+   "This reframing is liberating. Much teaching on faith focuses on how to increase or produce it — formulas, confessions, disciplines. But Romans 10:17 reveals faith's origin is not your effort but hearing — specifically, hearing the word about Christ. When the Spirit speaks the Word into your spirit, faith rises. This means the pursuit of faith is actually the pursuit of revelation: position yourself to hear God, receive His Word, encounter Him through Scripture and prayer — and faith will be the natural fruit. Dr. Damina teaches that you cannot force faith any more than you can force love — but you can create the conditions in which both arise naturally: stillness before God, openness to the Spirit, and consistent exposure to the Word as encounter.",
+   "2 Corinthians 5:7 — 'we walk by faith, not by sight' — is a call to navigate life from the realm of revelation rather than the realm of senses and emotions. When circumstances say 'God has abandoned you,' faith says 'He will never leave nor forsake me' (Hebrews 13:5). When emotions say 'you are not healed,' faith says 'by His wounds I was healed' (1 Peter 2:24). Dr. Damina teaches that this is not denial of reality — it is the choice to live from a higher reality: the revealed reality of God's word, which is more reliable than any physical evidence. Walking by faith means your circumstances do not get the final word — God's revealed word does.",
+   "Full persuasion, as in Romans 4:20-21, is not the result of more evidence or logical argument. It is the result of knowing God — knowing His character so deeply that His promise becomes more real than the contradicting circumstance. Abraham 'was fully persuaded that God had power to do what he had promised' — this certainty came not from the evidence of his body (which was 'as good as dead') but from his knowledge of who God is. Intellectual agreement says 'Yes, I believe God can heal' while still dominated by fear. Full persuasion says 'God is faithful and His word is settled' — and rests in that regardless of what the body reports. Dr. Damina teaches that full persuasion is always the fruit of revelation knowledge of God's character, not merely doctrinal knowledge of His promises."],
+  // Lesson 12
+  ["Paul's cry in Philippians 3:10 is staggering when its context is understood: this is the man trained by Gamaliel, directly encountered the risen Christ, caught up to the third heaven, wrote most of the New Testament — and yet his consuming passion remains 'that I may KNOW Him.' This tells us that revelation knowledge of God has no ceiling. No matter how much has been revealed, there is always infinitely more. This is profoundly encouraging for every believer who feels their knowledge of God is small — you are on the same journey as the greatest apostle; you simply have different distances covered. The invitation is the same for all: press deeper. There is always more of God to know.",
+   "Proverbs 4:18 pictures the righteous person's path as dawn growing steadily brighter — not a sudden flood of light, but progressive consistent brightening. This is how revelation knowledge works: it comes in layers, each one building on the previous, each making the next level accessible. Dr. Damina teaches that God does not withhold revelation — He gives it progressively as we are able to receive it. 2 Corinthians 3:18 confirms this: 'from glory to glory.' The 'glory' you currently stand in is not your destination — it is your launching pad for the next level of revelation. Small faith is not a failure — it is the starting point of a journey. The question is not 'how much do I know?' but 'am I still walking toward knowing Him more?'",
+   "Dr. Damina's consistent teaching throughout this series circles around a central revelation: God is exactly like Jesus, and in Christ you are completely accepted, righteous, and beloved — not because of what you do but because of what He has done. The most common shift people report after engaging this material is a change in how they pray — from anxious petition to confident communion — and a change in how they see themselves — from striving sinner to beloved child. 2 Corinthians 3:18 says that beholding the glory of God transforms us into the same image — revelation is not just for the mind, it is for the whole person. The invitation is to let what has been revealed continue working its transformation deep into every area of life.",
+   "Ecclesiastes 4:12 says 'a cord of three strands is not quickly broken' — two together are stronger than one. A couple who pursues revelation knowledge together creates something uniquely powerful: mutual accountability, shared language, the ability to encourage each other in truth during difficult seasons. Practical commitments might include: a shared weekly study time; praying together using the principles from this series (communion over petition); discussing what God is revealing to each of you; returning to these 12 lessons periodically; choosing the next teaching series together. Dr. Damina's series is a beginning, not an end. The God you have begun to know through these 12 lessons is inexhaustibly deep — and the journey ahead holds more revelation than the journey already covered."]
+];
+
+// Self-rating and reveal functions
+function revealAnswer(lessonIdx, qIdx) {
+  const panel = document.getElementById('reveal-panel-' + lessonIdx + '-' + qIdx);
+  const btn = document.getElementById('reveal-btn-' + lessonIdx + '-' + qIdx);
+  if (!panel) return;
+  const isOpen = panel.style.display === 'block';
+  panel.style.display = isOpen ? 'none' : 'block';
+  btn.textContent = isOpen ? '💡 Reveal Suggested Insight' : '🙈 Hide Insight';
+}
+
+function saveRating(lessonIdx, qIdx, rating) {
+  if (!state[currentUser].ratings) state[currentUser].ratings = {};
+  if (!state[currentUser].ratings[lessonIdx]) state[currentUser].ratings[lessonIdx] = {};
+  state[currentUser].ratings[lessonIdx][qIdx] = rating;
+  save();
+  // Update button styles
+  ['green','amber','red'].forEach(r => {
+    const btn = document.getElementById('rate-' + r + '-' + lessonIdx + '-' + qIdx);
+    if (btn) btn.style.opacity = r === rating ? '1' : '0.4';
+  });
+}
+
+load();
+</script>
+</body>
+</html>
